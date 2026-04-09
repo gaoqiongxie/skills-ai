@@ -180,6 +180,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-09 | 新建 | anti-pua（职场反PUA话术） |
 | 2026-04-09 | 新建 | poetry-scenery（诗意风景描述） |
 | 2026-04-09 | 新建 | photo-organizer（照片整理助手） |
+| 2026-04-09 | 新建 | rural-story-writer（乡土叙事小说生成器） |
 
 ---
 
