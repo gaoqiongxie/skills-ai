@@ -48,7 +48,8 @@ D:\xgq\work\skills-ai\
 ├── brainstorming/              # 🆕 结构化头脑风暴（obra/superpowers）
 ├── writing-plans/              # 🆕 详细实施计划（obra/superpowers）
 ├── idiom-chain/                # 🆕 成语接龙（中国传统文字游戏）
-└── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
+├── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
+└── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
 ```
 
 ---
@@ -64,7 +65,19 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（33个）
+## 🚀 已安装的 Skills（34个）
+
+### 💼 工作类（7个）
+
+| Skill名称 | 功能 | 触发关键词 |
+|----------|------|-----------|
+| **anti-pua** | 职场反PUA话术，怼回老板的精神控制 | "老板说"、"怎么怼"、"被PUA了" |
+| **meeting-notes** | 把混乱会议记录整理成正式纪要 | "整理会议纪要"、"会议记录太乱" |
+| **weekly-report** | 根据工作内容生成简洁专业周报 | "写周报"、"本周工作总结" |
+| **leave-request** | 生成得体又易批准的请假话术 | "怎么请假"、"请假理由" |
+| **elevator-pitch** | 30秒/1分钟电梯演讲生成 | "电梯演讲"、"一句话介绍" |
+| **argue-winner** | 应对客户投诉/甩锅/PUA | "吵架"、"怎么回击"、"被甩锅" |
+| **bs-translator** | 把大白话翻译成听不懂的版本 🆕 | "废话"、"听不懂人话"、"翻译成人话" |
 
 ### 🔧 开发方法论类（5个）🆕
 
