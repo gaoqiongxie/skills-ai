@@ -1,5 +1,9 @@
 # 会议纪要整理助手
 
+> **来源**: 原创 + 企业办公最佳实践
+> 
+> **灵感来源**: awesome-agent-skills - meeting-notes (126K⭐热门技能)
+
 ## 基本信息
 - **Skill名称**: meeting-notes
 - **版本**: 1.0.0
