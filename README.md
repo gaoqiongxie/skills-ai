@@ -46,7 +46,9 @@ D:\xgq\work\skills-ai\
 ├── test-driven-development/      # 🆕 TDD测试驱动开发（obra/superpowers）
 ├── confidence-check/            # 🆕 AI自我置信度评估（Top 20 Skills）
 ├── brainstorming/              # 🆕 结构化头脑风暴（obra/superpowers）
-└── writing-plans/              # 🆕 详细实施计划（obra/superpowers）
+├── writing-plans/              # 🆕 详细实施计划（obra/superpowers）
+├── idiom-chain/                # 🆕 成语接龙（中国传统文字游戏）
+└── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
 ```
 
 ---
@@ -62,7 +64,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（31个）
+## 🚀 已安装的 Skills（33个）
 
 ### 🔧 开发方法论类（5个）🆕
 
@@ -102,6 +104,13 @@ D:\xgq\work\skills-ai\
 | **knowledge-card** | 把知识整理成记忆卡片 | "知识卡片"、"帮我背书" |
 | **study-buddy** | 陪孩子背课文/听写/口算 | "陪孩子学习"、"听写" |
 | **jargon-translator** | 专业术语翻译成大白话 | "术语翻译"、"听不懂" |
+
+### 🎮 传统文化游戏类（2个）🆕
+
+| Skill名称 | 功能 | 来源 | 触发关键词 |
+|----------|------|------|-----------|
+| **idiom-chain** | 经典成语接龙，考验成语储备 | 原创 | "成语接龙"、"接龙"、"玩接龙" |
+| **feihua-ling** | 古诗词飞花令，诗词大会玩法 | 原创 | "飞花令"、"诗词接龙"、"对诗" |
 
 ### 💡 创意类（6个）
 
