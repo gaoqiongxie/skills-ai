@@ -1,5 +1,9 @@
 # 乡土叙事小说生成器（Rural China Story Writer）
 
+> **来源**: 原创 - 基于乡土文学风格
+> 
+> **灵感来源**: 刘震云、余华等乡土文学作家风格
+
 ## 基本信息
 
 - **Skill名称**: rural-story-writer

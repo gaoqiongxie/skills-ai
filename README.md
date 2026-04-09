@@ -1,6 +1,8 @@
 # AI Skills 工具集
 
 > 高琼的 WorkBuddy AI 技能库 —— 让AI成为你工作生活的超级助手
+>
+> **数据来源**: GitHub热门Skills分析 (github.com/anthropics/skills ⭐114K, obra/superpowers ⭐142K)
 
 ---
 
@@ -16,36 +18,63 @@ D:\xgq\work\skills-ai\
 ├── food-picker/                  # 外卖选择困难症终结者
 ├── gift-advisor/                 # 礼物参谋
 ├── outfit-weather/               # 穿搭天气助手
-├── recipe-random/                # 菜谱随机抽
+├── recipe-random/               # 菜谱随机抽
 ├── meeting-notes/                # 会议纪要整理助手
-├── weekly-report/                # 周报生成器
+├── weekly-report/               # 周报生成器
 ├── leave-request/               # 请假话术助手
-├── elevator-pitch/               # 电梯演讲生成器
-├── argue-winner/                 # 吵架赢对面
-├── wrong-answer/                 # 错题本分析助手
-├── knowledge-card/               # 知识卡片生成器
-├── study-buddy/                  # 小学生陪练助手
-├── jargon-translator/            # 术语翻译器
-├── moments-copywriter/           # 朋友圈文案生成器
-├── letter-future/                # 给未来写封信
-├── epitaph-generator/            # 墓志铭生成器
-├── horoscope/                    # 星座解签
-├── emoji-translator/             # Emoji翻译器
-├── choice-helper/                # 两难选择器
-├── venting-hole/                 # 吐槽树洞
-├── sleep-story/                  # 睡前故事
-├── year-summary/                 # 年终总结生成器
-├── declutter-judge/              # 断舍离裁判
-├── home-design/                  # 装修灵感墙
-├── plant-care/                   # 绿植养护指南
-└── home-storage/                 # 家居收纳指南
+├── elevator-pitch/              # 电梯演讲生成器
+├── argue-winner/                # 吵架赢对面
+├── wrong-answer/                # 错题本分析助手
+├── knowledge-card/              # 知识卡片生成器
+├── study-buddy/                 # 小学生陪练助手
+├── jargon-translator/           # 术语翻译器
+├── moments-copywriter/          # 朋友圈文案生成器
+├── letter-future/               # 给未来写封信
+├── epitaph-generator/           # 墓志铭生成器
+├── horoscope/                   # 星座解签
+├── emoji-translator/            # Emoji翻译器
+├── choice-helper/               # 两难选择器
+├── venting-hole/                # 吐槽树洞
+├── sleep-story/                 # 睡前故事
+├── year-summary/                # 年终总结生成器
+├── declutter-judge/             # 断舍离裁判
+├── home-design/                 # 装修灵感墙
+├── plant-care/                  # 绿植养护指南
+├── home-storage/                # 家居收纳指南
+├── skill-lookup/                 # 🆕 Skills发现助手（热门来源）
+├── systematic-debugging/        # 🆕 系统化调试方法论（obra/superpowers）
+├── test-driven-development/      # 🆕 TDD测试驱动开发（obra/superpowers）
+├── confidence-check/            # 🆕 AI自我置信度评估（Top 20 Skills）
+├── brainstorming/              # 🆕 结构化头脑风暴（obra/superpowers）
+└── writing-plans/              # 🆕 详细实施计划（obra/superpowers）
 ```
 
 ---
 
-## 🚀 已安装的 Skills（26个）
+## 🔥 热门Skills来源（本次新增标注）
 
-### 💼 工作类（5个）
+| 来源项目 | Stars | 贡献的Skill理念 |
+|---------|-------|----------------|
+| **obra/superpowers** | ⭐ 142K | systematic-debugging, test-driven-development, brainstorming, writing-plans |
+| **Anthropic官方Skills** | ⭐ 114K | docx, pdf, pptx, xlsx (官方文档处理) |
+| **skills.sh find-skills** | 418K安装 | skill-lookup (元技能理念) |
+| **Top 20 Claude Code** | 169.7K | confidence-check, create-pr (自动化理念) |
+
+---
+
+## 🚀 已安装的 Skills（31个）
+
+### 🔧 开发方法论类（5个）🆕
+
+| Skill名称 | 功能 | 来源 | Stars |
+|----------|------|------|-------|
+| **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
+| **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
+| **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
+| **brainstorming** | 结构化头脑风暴，编码前思考 | obra/superpowers | 142K |
+| **confidence-check** | AI自我置信度评估 | Top 20 Skills | 19.8K |
+
+### 💼 工作类（6个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -74,7 +103,7 @@ D:\xgq\work\skills-ai\
 | **study-buddy** | 陪孩子背课文/听写/口算 | "陪孩子学习"、"听写" |
 | **jargon-translator** | 专业术语翻译成大白话 | "术语翻译"、"听不懂" |
 
-### 💡 创意类（5个）
+### 💡 创意类（6个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -122,6 +151,9 @@ D:\xgq\work\skills-ai\
 
 # 触发 choice-helper
 "该选A公司月薪2万还是B公司月薪1.5万？"
+
+# 触发 systematic-debugging
+"接口报500错误，帮我分析下"
 ```
 
 WorkBuddy会自动识别并加载对应的Skill。
@@ -210,38 +242,44 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 
 ## 📌 Skill维护记录
 
-| 日期 | 操作 | Skill名称 |
-|-----|------|----------|
-| 2026-04-09 | 新建 | anti-pua（职场反PUA话术） |
-| 2026-04-09 | 新建 | poetry-scenery（诗意风景描述） |
-| 2026-04-09 | 新建 | photo-organizer（照片整理助手） |
-| 2026-04-09 | 新建 | rural-story-writer（乡土叙事小说生成器） |
-| 2026-04-09 | 新建 | food-picker（外卖选择困难症终结者） |
-| 2026-04-09 | 新建 | gift-advisor（礼物参谋） |
-| 2026-04-09 | 新建 | outfit-weather（穿搭天气助手） |
-| 2026-04-09 | 新建 | recipe-random（菜谱随机抽） |
-| 2026-04-09 | 新建 | meeting-notes（会议纪要整理助手） |
-| 2026-04-09 | 新建 | weekly-report（周报生成器） |
-| 2026-04-09 | 新建 | leave-request（请假话术助手） |
-| 2026-04-09 | 新建 | elevator-pitch（电梯演讲生成器） |
-| 2026-04-09 | 新建 | argue-winner（吵架赢对面） |
-| 2026-04-09 | 新建 | wrong-answer（错题本分析助手） |
-| 2026-04-09 | 新建 | knowledge-card（知识卡片生成器） |
-| 2026-04-09 | 新建 | study-buddy（小学生陪练助手） |
-| 2026-04-09 | 新建 | jargon-translator（术语翻译器） |
-| 2026-04-09 | 新建 | moments-copywriter（朋友圈文案生成器） |
-| 2026-04-09 | 新建 | letter-future（给未来写封信） |
-| 2026-04-09 | 新建 | epitaph-generator（墓志铭生成器） |
-| 2026-04-09 | 新建 | horoscope（星座解签） |
-| 2026-04-09 | 新建 | emoji-translator（Emoji翻译器） |
-| 2026-04-09 | 新建 | choice-helper（两难选择器） |
-| 2026-04-09 | 新建 | venting-hole（吐槽树洞） |
-| 2026-04-09 | 新建 | sleep-story（睡前故事） |
-| 2026-04-09 | 新建 | year-summary（年终总结生成器） |
-| 2026-04-09 | 新建 | declutter-judge（断舍离裁判） |
-| 2026-04-09 | 新建 | home-design（装修灵感墙） |
-| 2026-04-09 | 新建 | plant-care（绿植养护指南） |
-| 2026-04-09 | 新建 | home-storage（家居收纳指南） |
+| 日期 | 操作 | Skill名称 | 来源 |
+|-----|------|----------|------|
+| 2026-04-09 | 新建 | anti-pua（职场反PUA话术） | 原创 |
+| 2026-04-09 | 新建 | poetry-scenery（诗意风景描述） | 原创 |
+| 2026-04-09 | 新建 | photo-organizer（照片整理助手） | 原创 |
+| 2026-04-09 | 新建 | rural-story-writer（乡土叙事小说生成器） | 原创 |
+| 2026-04-09 | 新建 | food-picker（外卖选择困难症终结者） | 原创 |
+| 2026-04-09 | 新建 | gift-advisor（礼物参谋） | 原创 |
+| 2026-04-09 | 新建 | outfit-weather（穿搭天气助手） | 原创 |
+| 2026-04-09 | 新建 | recipe-random（菜谱随机抽） | 原创 |
+| 2026-04-09 | 新建 | meeting-notes（会议纪要整理助手） | awesome-agent-skills |
+| 2026-04-09 | 新建 | weekly-report（周报生成器） | 原创 |
+| 2026-04-09 | 新建 | leave-request（请假话术助手） | 原创 |
+| 2026-04-09 | 新建 | elevator-pitch（电梯演讲生成器） | 原创 |
+| 2026-04-09 | 新建 | argue-winner（吵架赢对面） | Top 20 Skills |
+| 2026-04-09 | 新建 | wrong-answer（错题本分析助手） | 原创 |
+| 2026-04-09 | 新建 | knowledge-card（知识卡片生成器） | 艾宾浩斯 |
+| 2026-04-09 | 新建 | study-buddy（小学生陪练助手） | 番茄工作法 |
+| 2026-04-09 | 新建 | jargon-translator（术语翻译器） | 原创 |
+| 2026-04-09 | 新建 | moments-copywriter（朋友圈文案生成器） | 原创 |
+| 2026-04-09 | 新建 | letter-future（给未来写封信） | 原创 |
+| 2026-04-09 | 新建 | epitaph-generator（墓志铭生成器） | 原创 |
+| 2026-04-09 | 新建 | horoscope（星座解签） | 原创 |
+| 2026-04-09 | 新建 | emoji-translator（Emoji翻译器） | 原创 |
+| 2026-04-09 | 新建 | choice-helper（两难选择器） | 原创 |
+| 2026-04-09 | 新建 | venting-hole（吐槽树洞） | 原创 |
+| 2026-04-09 | 新建 | sleep-story（睡前故事） | 原创 |
+| 2026-04-09 | 新建 | year-summary（年终总结生成器） | 原创 |
+| 2026-04-09 | 新建 | declutter-judge（断舍离裁判） | 原创 |
+| 2026-04-09 | 新建 | home-design（装修灵感墙） | 原创 |
+| 2026-04-09 | 新建 | plant-care（绿植养护指南） | 原创 |
+| 2026-04-09 | 新建 | home-storage（家居收纳指南） | 原创 |
+| 2026-04-09 | 🆕新增 | skill-lookup（Skills发现助手） | skills.sh (418K) |
+| 2026-04-09 | 🆕新增 | systematic-debugging（系统调试） | obra/superpowers (142K) |
+| 2026-04-09 | 🆕新增 | test-driven-development（TDD开发） | obra/superpowers (142K) |
+| 2026-04-09 | 🆕新增 | confidence-check（置信度评估） | Top 20 Skills |
+| 2026-04-09 | 🆕新增 | brainstorming（结构化头脑风暴） | obra/superpowers (142K) |
+| 2026-04-09 | 🆕新增 | writing-plans（详细实施计划） | obra/superpowers (142K) |
 
 ---
 
