@@ -49,7 +49,8 @@ D:\xgq\work\skills-ai\
 ├── writing-plans/              # 🆕 详细实施计划（obra/superpowers）
 ├── idiom-chain/                # 🆕 成语接龙（中国传统文字游戏）
 ├── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
-└── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
+├── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
+└── personality-test/          # 🆕 人格测试大全（MBTI/九型/DISC/星座/血型）
 ```
 
 ---
@@ -65,7 +66,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（34个）
+## 🚀 已安装的 Skills（35个）
 
 ### 💼 工作类（7个）
 
@@ -78,6 +79,12 @@ D:\xgq\work\skills-ai\
 | **elevator-pitch** | 30秒/1分钟电梯演讲生成 | "电梯演讲"、"一句话介绍" |
 | **argue-winner** | 应对客户投诉/甩锅/PUA | "吵架"、"怎么回击"、"被甩锅" |
 | **bs-translator** | 把大白话翻译成听不懂的版本 🆕 | "废话"、"听不懂人话"、"翻译成人话" |
+
+### 🧠 人格测试类（1个）🆕
+
+| Skill名称 | 功能 | 触发关键词 |
+|----------|------|-----------|
+| **personality-test** | MBTI/九型人格/DISC/大五/星座/血型全套人格测试 | "MBTI"、"人格测试"、"九型人格"、"星座性格" |
 
 ### 🔧 开发方法论类（5个）🆕
 
