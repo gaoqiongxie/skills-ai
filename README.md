@@ -51,6 +51,7 @@ D:\xgq\work\skills-ai\
 ├── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
 ├── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
 └── personality-test/          # 🆕 人格测试大全（MBTI/九型/DISC/星座/血型）
+└── memory-system/            # 🆕 记忆系统（缓存/Session/消息队列）
 ```
 
 ---
@@ -66,7 +67,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（35个）
+## 🚀 已安装的 Skills（36个）
 
 ### 💼 工作类（7个）
 
@@ -86,7 +87,7 @@ D:\xgq\work\skills-ai\
 |----------|------|-----------|
 | **personality-test** | MBTI/九型人格/DISC/大五/星座/血型全套人格测试 | "MBTI"、"人格测试"、"九型人格"、"星座性格" |
 
-### 🔧 开发方法论类（5个）🆕
+### 🔧 开发方法论类（6个）🆕
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -95,6 +96,7 @@ D:\xgq\work\skills-ai\
 | **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
 | **brainstorming** | 结构化头脑风暴，编码前思考 | obra/superpowers | 142K |
 | **confidence-check** | AI自我置信度评估 | Top 20 Skills | 19.8K |
+| **memory-system** | 记忆系统：Redis缓存/多级缓存/分布式Session/消息队列 | 自建 | - |
 
 ### 💼 工作类（6个）
 
