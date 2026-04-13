@@ -50,8 +50,9 @@ D:\xgq\work\skills-ai\
 ├── idiom-chain/                # 🆕 成语接龙（中国传统文字游戏）
 ├── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
 ├── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
-└── personality-test/          # 🆕 人格测试大全（MBTI/九型/DISC/星座/血型）
-└── memory-system/            # 🆕 记忆系统（缓存/Session/消息队列）
+├── personality-test/          # 🆕 人格测试大全（MBTI/九型/DISC/星座/血型）
+├── memory-system/            # 🆕 记忆系统（缓存/Session/消息队列）
+└── memory-bank/             # 🆕 项目记忆系统（AGENTS/模板/ADR）
 ```
 
 ---
@@ -67,7 +68,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（36个）
+## 🚀 已安装的 Skills（37个）
 
 ### 💼 工作类（7个）
 
@@ -97,6 +98,7 @@ D:\xgq\work\skills-ai\
 | **brainstorming** | 结构化头脑风暴，编码前思考 | obra/superpowers | 142K |
 | **confidence-check** | AI自我置信度评估 | Top 20 Skills | 19.8K |
 | **memory-system** | 记忆系统：Redis缓存/多级缓存/分布式Session/消息队列 | 自建 | - |
+| **memory-bank** | 项目记忆系统：AGENTS/INDEX/模板/ADR文档结构 | 自建 | - |
 
 ### 💼 工作类（6个）
 
