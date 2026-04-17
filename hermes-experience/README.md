@@ -22,7 +22,12 @@
 ├── snippets/          # 代码片段
 │   ├── java/
 │   └── sql/
-└── rules/            # 项目规则
+├── rules/             # 📋 项目规则（重点）
+│   ├── shared-rules.md         # 共享规则入口
+│   ├── coding-standards.md     # 编码规范
+│   ├── git-workflow.md        # Git工作流
+│   └── code-review.md         # Code Review要点
+└── project-map.md    # 跨项目依赖关系
 ```
 
 ---
@@ -35,8 +40,19 @@
 
 ---
 
-## 📦 相关 Skill
+## 📋 rules/ 核心内容
 
-- [memory-bank](../memory-bank/) - 项目基础文档结构
-- [karpathy-skills](../karpathy-skills/) - LLM 编程避坑
+| 文件 | 内容 |
+|------|------|
+| shared-rules.md | 项目共享规则入口 |
+| coding-standards.md | Java/SQL/API/日志规范 |
+| git-workflow.md | 分支策略/Commit规范 |
+| code-review.md | Review检查清单 |
+
+---
+
+## 🔗 相关 Skill
+
+- [memory-bank](../memory-bank/) - 项目文档结构（AGENTS/模板）
 - [memory-system](../memory-system/) - 缓存技术实现
+- [karpathy-skills](../karpathy-skills/) - LLM编程避坑
