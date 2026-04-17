@@ -52,7 +52,9 @@ D:\xgq\work\skills-ai\
 ├── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
 ├── personality-test/          # 🆕 人格测试大全（MBTI/九型/DISC/星座/血型）
 ├── memory-system/            # 🆕 记忆系统（缓存/Session/消息队列）
-└── memory-bank/             # 🆕 项目记忆系统（AGENTS/模板/ADR）
+├── memory-bank/             # 🆕 项目记忆系统（AGENTS/模板/ADR）
+├── karpathy-skills/       # 🆕 LLM编程避坑指南（Karpathy最佳实践）
+└── hermes-experience/     # 🆕 经验沉淀系统（Do it once, Automate forever）
 ```
 
 ---
@@ -68,7 +70,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（37个）
+## 🚀 已安装的 Skills（39个）
 
 ### 💼 工作类（7个）
 
@@ -99,6 +101,8 @@ D:\xgq\work\skills-ai\
 | **confidence-check** | AI自我置信度评估 | Top 20 Skills | 19.8K |
 | **memory-system** | 记忆系统：Redis缓存/多级缓存/分布式Session/消息队列 | 自建 | - |
 | **memory-bank** | 项目记忆系统：AGENTS/INDEX/模板/ADR文档结构 | 自建 | - |
+| **karpathy-skills** | LLM编程避坑：十大戒律/调试流程/提问模板 | karpathy-skills ⭐14.6K | 14.6K |
+| **hermes-experience** | 经验沉淀：patterns/snippets/rules，让AI越用越懂你 | hermes-agent ⭐62.8K | 62.8K |
 
 ### 💼 工作类（6个）
 
