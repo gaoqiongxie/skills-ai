@@ -2,7 +2,7 @@
 
 > 灵感来源：Hermes Agent（ nousresearch/hermes-agent ⭐62.8K）
 > 核心：把成功的经验转化为可复用的 Skill，让 AI 越用越懂你
-> 触发关键词：经验沉淀、技能积累、让AI学习、项目知识库
+> 触发关键词：经验沉淀、技能积累、让AI学习、项目规则、编码规范
 
 ---
 
@@ -31,71 +31,324 @@
 │   └── sql/
 │       ├── soft-delete.sql          # 软删除模板
 │       └── audit-log.sql           # 审计日志SQL
-└── rules/                    # 项目规则
-    ├── naming.md                # 命名规范
-    ├── git-workflow.md          # Git 工作流
-    └── code-review.md           # Code Review 要点
+├── rules/                    # 📋 项目规则（重点）
+│   ├── shared-rules.md              # 项目共享规则
+│   ├── coding-standards.md         # 编码规范
+│   ├── git-workflow.md             # Git工作流
+│   └── code-review.md              # Code Review要点
+└── project-map.md             # 跨项目依赖关系
 ```
 
 ---
 
-## 📝 Pattern 模板（经验模式）
+## 📋 项目规则（核心）
 
-### 异常处理模式
+### shared-rules.md — 项目共享规则
+
 ```markdown
-# 异常处理模式：XXX场景
+# <项目中文全称> 项目共享规则
 
-## 问题描述
-[什么情况下会出现问题]
+> 本文件是项目规则的单一事实来源，供 AI 助手共同引用。
 
-## 解决方案
+---
+
+## 项目清单
+
+| 项目 | 代码路径 | 说明 |
+|------|----------|------|
+| <项目中文全称> | <代码路径> | <项目说明> |
+
+---
+
+## 技术栈
+
+<技术栈>
+
+---
+
+## 编码规范
+
+### 必须遵守
+- 遵循项目现有代码风格
+- 新增方法必须有 Javadoc
+- 复杂逻辑加行注释
+- ServiceImpl 禁止直接注入外部 Feign Client，统一走 proxy 层
+- 金额用 BigDecimal，日期用 LocalDateTime
+- 禁止使用 `System.out.println()`，统一用 `@Slf4j` 的 `log`
+
+### 数据库规范
+- 表名、字段名使用小写下划线
+- 必须有 `id`、`create_time`、`update_time`
+- 逻辑删除用 `deleted` 字段
+
+### API 规范
+- 统一响应：`{"code": 200, "msg": "success", "data": {...}}`
+- 分页响应：`{"total": 100, "list": [...]}`
+
+---
+
+## Git 规范
+
+### 分支策略
+- `main`：主分支，仅通过 PR 合并
+- `develop`：开发分支
+- `feature/xxx`：功能分支
+- `bugfix/xxx`：修复分支
+
+### Commit 格式
+```
+<type>: story#<禅道编号> <需求名称> <具体改动>
+
+example: feat: story#12345 用户登录接口实现
+```
+
+---
+
+## 工作流程
+
+1. **查规范再动手**：编码前先看同模块已有文件的写法
+2. **最小修改**：只做必要改动，不改无关文件
+3. **边做边记录**：有价值的信息及时写入对话日志
+
+### 快捷指令
+
+| 用户说法 | 执行操作 | 说明 |
+|---------|---------|------|
+| "更新下代码" | `git pull` | 直接执行，无需确认 |
+| "提交代码" | `git add` + `git commit` | 需确认提交信息 |
+| "推送代码" | `git push` | 需确认 |
+
+---
+
+## 禁止行为
+
+- 禁止执行 `git reset --hard`、`git rebase` 等改写历史的操作
+- 禁止修改无关文件和测试逻辑
+- 禁止在 memory-bank 目录存放非 .md 文件
+```
+
+---
+
+### coding-standards.md — 编码规范
+
+```markdown
+# 编码规范
+
+## Java 规范
+
+### 命名规范
+| 类型 | 规范 | 示例 |
+|------|------|------|
+| 类名 | 大驼峰 | UserService |
+| 方法名 | 小驼峰 | getUserById |
+| 常量 | 全大写下划线 | MAX_RETRY_COUNT |
+| 变量 | 小驼峰 | userName |
+| 包名 | 全小写 | com.xxx.crm |
+
+### 分层规范
+```
+Controller    → 参数校验、参数转换、调用Service
+Service       → 业务逻辑处理、事务管理
+Mapper        → 数据库操作（只做CRUD）
+VO/DTO/Req   → 数据传输对象
+```
+
+### 方法规范
+- 方法长度控制在 50 行以内
+- 参数不超过 5 个
+- 优先使用卫语句减少嵌套
+- 异常要捕获处理，不能裸抛
+
+## SQL 规范
+
+```sql
+-- ✅ 正确
+SELECT id, name, create_time
+FROM sys_user
+WHERE deleted = 0 AND status = 1;
+
+-- ❌ 错误：SELECT *
+SELECT *
+FROM sys_user;
+```
+
+### 索引规范
+- 区分度高的字段放前面
+- 不要在索引列上使用函数
+- 避免冗余索引
+
+## 日志规范
+
 ```java
-// 推荐写法
-try {
-    // 业务逻辑
-} catch (BusinessException e) {
-    log.warn("业务异常：{}", e.getMessage());
-    throw e;
-} catch (Exception e) {
-    log.error("系统异常", e);
-    throw new SystemException("操作失败，请稍后重试");
+// ✅ 正确
+@Slf4j
+public class UserService {
+    public void login() {
+        log.info("用户登录: phone={}", phone);
+        try {
+            // 业务逻辑
+        } catch (BusinessException e) {
+            log.warn("业务异常: {}", e.getMessage());
+            throw e;
+        } catch (Exception e) {
+            log.error("系统异常", e);
+            throw new SystemException("操作失败");
+        }
+    }
+}
+
+// ❌ 错误
+System.out.println("用户登录");
+```
+
+## API 规范
+
+### 请求格式
+```json
+{
+  "phone": "13800138000",
+  "code": "123456"
 }
 ```
 
-## 适用场景
-- 场景1
-- 场景2
+### 响应格式
+```json
+// 成功
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "userId": 1,
+    "token": "xxx"
+  }
+}
 
-## 注意事项
-- xxx
-```
+// 分页
+{
+  "code": 200,
+  "msg": "success",
+  "data": {
+    "total": 100,
+    "list": [...]
+  }
+}
 
-### 缓存策略模式
-```markdown
-# 缓存策略：XXX场景
-
-## 数据特征
-- 读多写少 / 读写相当 / 写多读少
-- 数据量：xx 条
-- 更新频率：xx
-
-## 缓存方案
-| 维度 | 选择 |
-|------|------|
-| 缓存类型 | 本地 / Redis / 多级 |
-| TTL | xx 分钟 |
-| 更新策略 | Cache-Aside / Write-Through |
-
-## 代码示例
-```java
-@Cacheable(value = "xxx", key = "#id", unless = "#result == null")
-public Xxx getById(Long id) {
-    return xxxMapper.selectById(id);
+// 失败
+{
+  "code": 400,
+  "msg": "参数错误",
+  "data": null
 }
 ```
+```
 
-## 防坑指南
-- xxx
+---
+
+### git-workflow.md — Git工作流
+
+```markdown
+# Git 工作流
+
+## 分支命名
+
+| 类型 | 格式 | 示例 |
+|------|------|------|
+| 功能 | feature/故事编号-简短描述 | feature/12345-user-login |
+| 修复 | bugfix/故事编号-简短描述 | bugfix/12346-fix-null-pointer |
+| 发布 | release/v1.0.0 | release/v1.0.0 |
+
+## Commit 规范
+
+### 格式
+```
+<type>: story#<禅道编号> <需求名称> <具体改动>
+
+type: feat | fix | docs | style | refactor | test | chore
+```
+
+### 示例
+```
+feat: story#12345 用户登录接口实现
+fix: story#12346 修复用户列表空指针异常
+docs: 更新README用户登录说明
+refactor: 重构用户服务，提取公共方法
+```
+
+## PR 规范
+
+1. PR 标题同 Commit 格式
+2. 描述包含：改动内容、测试结果、截图（如有UI）
+3. 必须通过 CI 才能合并
+4. 至少 1 人 review 通过
+
+## 快捷指令
+
+| 用户说法 | 执行 | 命令 |
+|---------|------|------|
+| 更新代码 | git pull | `git pull origin develop` |
+| 提交代码 | git commit | `git add . && git commit -m "..."` |
+| 推送代码 | git push | `git push origin feature/xxx` |
+| 查看状态 | git status | `git status` |
+| 查看日志 | git log | `git log --oneline -10` |
+```
+
+---
+
+### code-review.md — Code Review要点
+
+```markdown
+# Code Review 要点清单
+
+## 1. 代码规范 ⭐⭐⭐
+- [ ] 命名是否符合项目规范
+- [ ] 是否有 SonarLint 警告
+- [ ] 是否有硬编码（密码、密钥）
+- [ ] 是否有 TODO 未完成
+
+## 2. 业务逻辑 ⭐⭐⭐
+- [ ] 逻辑是否正确
+- [ ] 边界条件是否处理（空指针、数组越界）
+- [ ] 并发安全（如果是多线程场景）
+- [ ] 事务边界是否正确
+
+## 3. 安全性 ⭐⭐⭐
+- [ ] SQL 注入风险（是否参数化查询）
+- [ ] XSS 风险（输出是否转义）
+- [ ] 越权风险（权限校验是否完整）
+- [ ] 敏感信息泄露（日志是否打印敏感数据）
+
+## 4. 性能 ⭐⭐
+- [ ] 是否有 N+1 查询
+- [ ] 是否有不必要的循环查库
+- [ ] 大数据量是否分页/分批处理
+- [ ] 是否有缓存机会
+
+## 5. 可维护性 ⭐⭐
+- [ ] 代码是否重复（DRY原则）
+- [ ] 是否过度设计
+- [ ] 注释是否充分
+- [ ] 是否易于扩展
+
+## 审查意见格式
+
+### 🔴 必须修改（阻塞）
+```
+[BLOCK] 描述问题
+位置：xxx.java:123
+建议：xxx
+```
+
+### 🟡 建议修改
+```
+[NIT] 描述问题
+位置：xxx.java:456
+建议：xxx
+```
+
+### 🟢 通过
+```
+[LGTM] 可以合并
+```
 ```
 
 ---
@@ -108,10 +361,10 @@ public Xxx getById(Long id) {
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  1️⃣ 识别                       2️⃣ 记录                  │
-│  这个问题值得沉淀吗？              写进 patterns/          │
-│  - 重复出现 ≥2次                  - 问题描述              │
-│  - 解决耗时 >30分钟                - 解决方案              │
-│  - 有通用性                       - 适用场景              │
+│  这个问题值得沉淀吗？              写进 rules/              │
+│  - 重复出现 ≥2次                  - 编码规范              │
+│  - 解决耗时 >30分钟                - Git工作流            │
+│  - 有通用性                       - Review要点            │
 │                                                         │
 │  3️⃣ 抽象                       4️⃣ 复用                  │
 │  提炼通用模式                     遇到类似问题时            │
@@ -125,50 +378,49 @@ public Xxx getById(Long id) {
 
 ## 📊 经验分类索引
 
-### 按场景分类
+### rules/ 目录（项目规则）
 
-| 场景 | Pattern 文件 | 代码片段 |
-|------|-------------|---------|
-| **异常处理** | exception-handling.md | - |
-| **缓存** | cache-strategy.md | pagination.java |
-| **API 设计** | api-design.md | result-wrapper.java |
-| **数据库** | - | soft-delete.sql |
-| **日志** | - | log-template.java |
-| **安全** | security-rules.md | - |
+| 文件 | 内容 | 优先级 |
+|------|------|--------|
+| shared-rules.md | 共享规则入口 | ⭐⭐⭐ |
+| coding-standards.md | Java/SQL/日志/API规范 | ⭐⭐⭐ |
+| git-workflow.md | Git工作流和快捷指令 | ⭐⭐ |
+| code-review.md | Code Review检查清单 | ⭐⭐ |
 
-### 按技术分类
+### patterns/ 目录（经验模式）
 
-| 技术栈 | 相关经验 |
-|--------|---------|
-| **Java/Spring** | 异常处理、缓存、事务 |
-| **MySQL** | SQL 优化、索引、软删除 |
-| **Redis** | 缓存策略、分布式锁 |
-| **API** | 统一响应、分页、参数校验 |
+| 场景 | Pattern 文件 |
+|------|-------------|
+| 异常处理 | exception-handling.md |
+| 缓存策略 | cache-strategy.md |
+| API 设计 | api-design.md |
+| 分页 | pagination-pattern.md |
+
+### snippets/ 目录（代码片段）
+
+| 语言 | 文件 |
+|------|------|
+| Java | pagination.java, result-wrapper.java |
+| SQL | soft-delete.sql, audit-log.sql |
 
 ---
 
 ## 🎯 快速记录模板
 
-### 新增 Pattern
+### 新增规则
 ```
-## [Pattern名称]
+## [规则名称]
 
-### 问题
-[一句话描述问题]
-
-### 解决
-[核心解决方案]
+### 要求
+- xxx
+- xxx
 
 ### 示例
-```[语言]
+```代码
 代码示例
 ```
 
-### 适用
-- 场景1
-- 场景2
-
-### 注意事项
+### 禁止
 - xxx
 ```
 
@@ -184,9 +436,6 @@ public Xxx getById(Long id) {
 代码内容
 ```
 
-### 依赖
-[依赖的库或配置]
-
 ### 改动记录
 | 日期 | 改动 | 作者 |
 |------|------|------|
@@ -195,38 +444,32 @@ public Xxx getById(Long id) {
 
 ---
 
-## 💡 经验提炼技巧
+## 🔗 与 memory-bank 配合
 
-### 好的经验应该：
-- ☑️ 一句话能说清楚问题
-- ☑️ 有可直接复用的代码
-- ☑️ 标注了适用边界
-- ☑️ 注明了可能的坑
+| Skill | 职责 |
+|-------|------|
+| **memory-bank** | 项目文档结构（AGENTS/模板/索引） |
+| **hermes-experience** | 经验沉淀（rules/snippets/patterns） |
 
-### 不值得沉淀的：
-- ❌ 只用一次的临时方案
-- ❌ 过于具体的业务逻辑
-- ❌ 没有通用性的奇技淫巧
-
----
-
-## 🔗 与其他 Skill 配合
-
-- **memory-bank** → 项目的基础文档结构
-- **karpathy-skills** → LLM 编程避坑
-- **memory-system** → 缓存技术的具体实现
+```
+项目记忆体系：
+├── AGENTS.md         ← memory-bank：AI必读上下文
+├── rules/            ← hermes-experience：编码规范/Git/Review
+├── snippets/         ← hermes-experience：代码片段
+└── 99-dialogue-logs/ ← 对话日志
+```
 
 ---
 
 ## 💬 使用方式
 
 ```
-用户：帮我沉淀这次 Bug 修复的经验
-助手：好的！【引导使用 Pattern 模板】
+用户：帮我沉淀这次Bug修复的经验
+助手：好的！使用 patterns/exception-handling.md 模板记录
 
-用户：我想把项目中常用的代码片段积累起来
-助手：建议用 snippets/ 结构，我来帮你创建基础模板
+用户：我想把项目的编码规范积累起来
+助手：使用 rules/coding-standards.md，我来帮你整理
 
 用户：下次遇到类似问题怎么调用？
-助手：【说明如何关联使用】
+助手：hermes-experience 会自动读取 rules/ 下的规范
 ```

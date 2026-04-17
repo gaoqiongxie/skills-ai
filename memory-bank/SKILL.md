@@ -5,32 +5,44 @@
 
 ---
 
+## 🎯 核心理念
+
+**让 AI 从"陌生人"变成"老员工"**
+
+每次启动新项目或接手旧项目，AI 需要大量时间了解背景。Memory Bank 把这些信息结构化存档，AI 读一遍就能上手。
+
+---
+
 ## 📁 目录结构
 
 ```
 项目名-memory-bank/
-├── AGENTS.md           # 🔴 核心：项目全局上下文（必读）
-├── INDEX.md            # 📖 文件导航
+├── AGENTS.md           # 🔴 核心：AI必读的项目全局上下文
+├── INDEX.md            # 文件导航
 ├── README.md           # 项目说明
-├── templates/          # 📝 常用 Prompt 模板
-│   ├── feature-prompt.md
-│   ├── bugfix-prompt.md
-│   ├── code-review-prompt.md
-│   └── test-prompt.md
-├── knowledge/          # 💡 技术决策记录（ADR）
+├── templates/          # 开发模板库
+│   ├── 01-project-profile.md     # 项目概况模板
+│   ├── 07-coding-standards.md    # 编码规范模板
+│   ├── 09-todo-tracker.md        # TODO追踪模板
+│   ├── 10-snippets.md            # 代码片段模板
+│   ├── 11-feign-guide.md         # Feign调用指南
+│   ├── 12-mq-guide.md           # MQ使用指南
+│   ├── feature-prompt.md         # 功能开发模板
+│   ├── bugfix-prompt.md          # Bug修复模板
+│   ├── code-review-prompt.md    # 代码审查模板
+│   └── test-prompt.md            # 测试用例模板
+├── knowledge/          # ADR技术决策记录
 │   ├── ADR-001-选择技术栈.md
 │   └── ...
-└── projects/           # 📚 各模块详细文档
-    ├── module-a/
-    ├── module-b/
-    └── ...
+├── rules/              # 📋 项目规则（hermes-experience配套）
+│   ├── shared-rules.md          # 共享规则
+│   └── <助手名>-助手.md          # 助手配置
+└── projects/           # 各模块详细文档
 ```
 
 ---
 
-## 📄 文件模板
-
-### AGENTS.md（项目全局上下文）
+## 📄 AGENTS.md（项目全局上下文）
 
 ```markdown
 # AGENTS.md - 项目全局上下文
@@ -48,9 +60,11 @@
 
 | 类别 | 技术 | 版本 |
 |------|------|------|
-| 后端 | Java/Spring Boot | 2.7.x |
+| 后端 | Java/Spring Boot | 3.x |
 | 数据库 | MySQL | 8.0 |
 | 缓存 | Redis | 6.x |
+| 消息队列 | RabbitMQ / RocketMQ | - |
+| ORM | MyBatis Plus | 3.5.x |
 | 前端 | Vue3 | 3.x |
 | ... | ... | ... |
 
@@ -61,13 +75,17 @@ src/
 ├── main/
 │   ├── java/com/xxx/
 │   │   ├── controller/   # 控制器层
-│   │   ├── service/      # 服务层
-│   │   ├── mapper/       # 数据访问层
-│   │   ├── entity/       # 实体类
-│   │   └── common/       # 公共组件
+│   │   ├── service/     # 服务层
+│   │   ├── mapper/      # 数据访问层
+│   │   ├── entity/      # 实体类
+│   │   ├── vo/          # 视图对象
+│   │   ├── dto/         # 数据传输对象
+│   │   ├── req/         # 请求对象
+│   │   ├── resp/        # 响应对象
+│   │   └── common/      # 公共组件
 │   └── resources/
-│       ├── mapper/       # MyBatis XML
-│       └── config/       # 配置文件
+│       ├── mapper/      # MyBatis XML
+│       └── config/      # 配置文件
 └── test/
 ```
 
@@ -78,12 +96,13 @@ src/
 - **方法名**：小驼峰（getUserById）
 - **常量**：全大写下划线（MAX_RETRY_COUNT）
 - **数据库表**：小写下划线（sys_user）
+- **包名**：全小写（com.xxx.crm）
 
 ### 分层规范
 - Controller：参数校验、参数转换、调用Service
-- Service：业务逻辑处理、事务管理
+- Service/ServiceImpl：业务逻辑处理、事务管理
 - Mapper：数据库操作（只做CRUD，不写业务）
-- VO/DTO：数据传输对象
+- VO/DTO/Req/Resp：数据传输对象
 
 ### API 规范
 - 统一响应格式：`{"code": 200, "msg": "success", "data": {...}}`
@@ -100,10 +119,10 @@ src/
 
 ### Commit 规范
 ```
-<type>: <subject>
+<type>: story#<禅道编号> <需求名称> <具体改动>
 
 type: feat | fix | docs | style | refactor | test | chore
-example: feat: 新增用户登录功能
+example: feat: story#12345 用户登录接口实现
 ```
 
 ## 6. 数据库规范
@@ -111,6 +130,7 @@ example: feat: 新增用户登录功能
 - 表名、字段名使用小写下划线
 - 必须有 `id`（主键）、`create_time`、`update_time`
 - 逻辑删除用 `deleted` 字段
+- 金额用 DECIMAL，日期用 DATETIME
 - 敏感字段加密存储
 
 ## 7. 安全规范
@@ -119,6 +139,7 @@ example: feat: 新增用户登录功能
 - 用户密码必须 BCrypt 加密
 - SQL 参数化查询，禁止字符串拼接
 - 接口需权限校验
+- 禁止使用 `System.out.println()`，统一用 `@Slf4j` 的 `log`
 
 ## 8. 常用命令
 
@@ -132,8 +153,8 @@ mvn test
 # 构建打包
 mvn clean package -DskipTests
 
-# 数据库迁移
-mvn flyway:migrate
+# 更新代码
+git pull
 ```
 
 ## 9. 环境信息
@@ -146,371 +167,293 @@ mvn flyway:migrate
 
 ## 10. 注意事项
 
-- ⚠️ 第三方支付接口需加密处理
+- ⚠️ 涉及跨项目调用（Feign）时，变更需同步通知对方
+- ⚠️ 金额计算统一用 BigDecimal
+- ⚠️ 日期时间统一用 LocalDateTime
 - ⚠️ 生产环境禁止开启 debug 日志
-- ⚠️ 大数据量操作需分批处理
 ```
 
 ---
 
-### INDEX.md（文件导航）
+## 📝 初始化流程（新项目）
+
+当用户说"帮我初始化XXX项目的记忆库"时，执行以下步骤：
+
+### 第一步：收集项目信息
+
+| 信息项 | 示例 | 说明 |
+|--------|------|------|
+| 项目名称 | `fss` | 英文缩写，用于目录命名 |
+| 项目中文名 | 财务共享服务 | 用于规则文件和日志 |
+| 代码路径 | `D:\fehorizon\crm\fss` | 项目根目录 |
+| 技术栈 | Spring Boot + Vue 3 | 主要技术栈 |
+| 项目说明 | 财务共享服务平台 | 一句话描述 |
+
+### 第二步：创建记忆库目录
+
+```
+项目记忆库路径：D:\xgq\kimi\memory-bank\<项目名>\
+├── 01-project-profile.md     # 项目概况
+├── 07-coding-standards.md    # 编码规范
+├── 09-todo-tracker.md        # TODO追踪
+├── 10-snippets.md            # 代码片段
+├── 11-feign-guide.md         # Feign调用指南
+├── 12-mq-guide.md           # MQ使用指南
+└── 99-dialogue-logs/         # 对话日志目录
+```
+
+### 第三步：创建项目规则文件
+
+在项目 `.trae/rules/` 目录下创建：
+
+#### 1. `<项目名>-shared-rules.md` — 项目共享规则
 
 ```markdown
-# INDEX.md - 文件导航
+# <项目中文全称> 项目共享规则
 
-> 本文件提供项目文档的快速索引
-
-## 📂 文档目录
-
-### 核心文档
-- [AGENTS.md](./AGENTS.md) - 项目全局上下文 ⭐必读
-- [README.md](./README.md) - 项目说明
-
-### 模板库
-- [功能开发模板](./templates/feature-prompt.md)
-- [Bug修复模板](./templates/bugfix-prompt.md)
-- [代码审查模板](./templates/code-review-prompt.md)
-- [测试用例模板](./templates/test-prompt.md)
-
-### 技术决策
-- [ADR-001-选择技术栈](./knowledge/ADR-001-选择技术栈.md)
-
-### 模块文档
-- [用户模块](./projects/user/)
-- [订单模块](./projects/order/)
-
-## 🔍 快速链接
-
-| 需求 | 查看 |
-|------|------|
-| 了解项目结构 | AGENTS.md |
-| 新功能开发 | templates/feature-prompt.md |
-| Bug修复 | templates/bugfix-prompt.md |
-| 技术选型 | knowledge/ |
-```
+> 本文件是项目规则的单一事实来源，供 AI 助手共同引用。
 
 ---
 
-### templates/feature-prompt.md（功能开发模板）
+## 项目清单
+
+| 项目 | 代码路径 | 说明 |
+|------|----------|------|
+| <项目中文全称> | <代码路径> | <项目说明> |
+
+---
+
+## 技术栈
+
+<技术栈>
+
+---
+
+## 编码规范
+
+- 遵循项目现有代码风格
+- 新增方法必须有 Javadoc
+- 复杂逻辑加行注释
+- 金额用 BigDecimal，日期用 LocalDateTime
+- 禁止使用 `System.out.println()`，统一用 `@Slf4j` 的 `log`
+
+---
+
+## Git 规范
+
+提交格式：`feat: story#<禅道编号> <需求名称> <具体改动>`
+
+---
+
+## 禁止行为
+
+- 禁止执行 `git reset --hard`、`git rebase` 等改写历史的操作
+- 禁止修改无关文件和测试逻辑
+- 禁止在 memory-bank 目录存放非 .md 文件
+```
+
+#### 2. `<助手名>-助手.md` — 助手配置
 
 ```markdown
-# 功能开发 Prompt 模板
+# <助手名> — 项目专属配置
 
-## 📋 需求描述
+你是「<助手名>」，<项目中文全称>的专属开发助手。
 
-**功能名称**：
-**需求来源**：
-**优先级**：P0/P1/P2/P3
-**截止日期**：
+## 工作路径
 
-### 功能描述
-（详细描述要实现的功能）
+- 代码路径：`<代码路径>`
+- 记忆库：`D:\xgq\kimi\memory-bank\<项目名>\`
+- 规则文件：`.trae/rules/<项目名>-shared-rules.md`
 
-### 用户故事
-As a [用户角色], I want [功能], so that [价值]
+## 工作流程
 
-### 验收标准
-- [ ] 标准1
-- [ ] 标准2
-- [ ] 标准3
+1. 编码前先看同模块已有文件的写法，遵循现有代码风格
+2. 产生有价值信息时写入对话日志
+3. 涉及新需求/Bug 时，读取 `09-todo-tracker.md`
+```
+
+### 第四步：更新项目清单
+
+将新项目追加到本 Skill 的「项目清单」中。
 
 ---
 
-## 🏗️ 技术方案
+## 🔄 共享记忆库（多项目协同）
 
-### 接口设计
 ```
-POST /api/v1/xxx
-Request: {...}
-Response: {...}
+D:\xgq\kimi\memory-bank\shared\           # 所有项目共享
+├── 01-cross-project-map.md    # 跨项目依赖关系图
+├── 02-shared-constants.md     # 共享常量与枚举映射
+├── 03-api-contracts.md        # 跨项目API契约（Feign接口）
+├── 04-db-shared-tables.md     # 共享数据库表说明
+└── 99-dialogue-logs/          # 跨项目对话日志
 ```
 
-### 数据结构
+### 共享规则
+- API契约变更：同步更新 model 模块的 DTO/Req/Resp
+- 共享枚举变更：所有相关项目的规则文件同步更新
+- 共享表结构变更：评估对所有相关项目的影响
+
+---
+
+## 📝 模板文件
+
+### 01-project-profile.md 模板
+
+```markdown
+# <项目中文全称> — 项目概况
+
+## 基本信息
+
+| 项目 | 值 |
+|------|-----|
+| 项目名称 | <项目中文全称> |
+| 英文缩写 | <项目名> |
+| 代码路径 | <代码路径> |
+| 技术栈 | <技术栈> |
+| 初始化日期 | <YYYY-MM-DD> |
+
+## 项目结构
+
+（待补充：扫描项目目录后自动生成）
+
+## 核心模块
+
+（待补充：了解业务后逐步完善）
+
+## 负责人
+
+| 模块 | 负责人 | 联系方式 |
+|------|--------|----------|
+| - | - | - |
+```
+
+### 09-todo-tracker.md 模板
+
+```markdown
+# <项目中文全称> — TODO追踪
+
+## 进行中
+
+| 编号 | 需求/Bug | 禅道编号 | 状态 | 备注 |
+|------|---------|---------|------|------|
+| - | - | - | - | - |
+
+## 已完成
+
+| 编号 | 需求/Bug | 禅道编号 | 完成日期 | 备注 |
+|------|---------|---------|---------|------|
+| - | - | - | - | - |
+```
+
+### 10-snippets.md 模板
+
+```markdown
+# <项目中文全称> — 代码片段
+
+## 常用工具类
+
+### 分页封装
 ```java
-// 实体类
-public class Xxx {
-    // 字段说明
+// 代码示例
+```
+
+### 统一响应封装
+```java
+// 代码示例
+```
+
+## 业务模板
+
+### 标准的CRUD
+```java
+// 代码示例
+```
+
+### Feign调用
+```java
+// 代码示例
+```
+```
+
+### 11-feign-guide.md 模板
+
+```markdown
+# <项目中文全称> — Feign调用指南
+
+## 调用方配置
+
+### Maven依赖
+```xml
+<dependency>
+    <groupId>com.xxx</groupId>
+    <artifactId>xxx-api</artifactId>
+    <version>1.0.0</version>
+</dependency>
+```
+
+### Feign Client声明
+```java
+@FeignClient(name = "xxx-service", url = "${feign.xxx.url}")
+public interface XxxClient {
+    // 接口方法
 }
 ```
 
-### 业务流程
-（流程图或文字描述）
+## 被调用方接口
 
-### 数据库变更
-```sql
--- 如有DDL变更
+（待补充）
+
+## 注意事项
+
+- 变更接口需同步通知调用方
 ```
 
----
-
-## 📝 开发记录
-
-| 日期 | 开发者 | 内容 | 状态 |
-|------|--------|------|------|
-| 2024-01-01 | 张三 | 完成基础功能 | ✅ |
-| 2024-01-02 | 张三 | 补充异常处理 | ✅ |
-```
-
----
-
-### templates/bugfix-prompt.md（Bug修复模板）
+### 12-mq-guide.md 模板
 
 ```markdown
-# Bug修复 Prompt 模板
+# <项目中文全称> — MQ使用指南
 
-## 🐛 Bug信息
+## 交换机/队列配置
 
-**Bug编号**：BUG-001
-**严重程度**：P0(致命)/P1(严重)/P2(一般)/P3(轻微)
-**发现日期**：
-**发现人**：
+| 交换机 | 类型 | 队列 | RoutingKey |
+|--------|------|------|------------|
+| - | - | - | - |
 
-### 问题描述
-（详细描述Bug现象）
+## 消息格式
 
-### 复现步骤
-1. 步骤1
-2. 步骤2
-3. 步骤3
-
-### 预期行为
-（正常应该怎样）
-
-### 实际行为
-（实际怎样）
-
----
-
-## 🔍 根因分析
-
-### 错误日志
-```
-（粘贴错误日志）
+```json
+{
+  "eventType": "xxx",
+  "data": {}
+}
 ```
 
-### 代码位置
-- 文件：
-- 方法：
-- 行号：
+## 消费者示例
 
-### 根因
-（分析为什么会出Bug）
-
----
-
-## ✅ 修复方案
-
-### 修复代码
 ```java
-// 修改前
-xxx
-
-// 修改后
-xxx
+@RabbitListener(queues = "xxx-queue")
+public void handleXxx(Message message) {
+    // 处理逻辑
+}
 ```
 
-### 验证结果
-- [ ] 本地测试通过
-- [ ] 单元测试通过
-- [ ] 回归测试通过
+## 注意事项
 
----
-
-## 📝 修复记录
-
-| 日期 | 修复人 | 内容 |
-|------|--------|------|
-| 2024-01-01 | 张三 | 修复xxx问题 |
+- 消费幂等性处理
+- 失败重试机制
 ```
 
 ---
 
-### templates/code-review-prompt.md（代码审查模板）
+## 🚀 快速开始
 
-```markdown
-# Code Review Prompt 模板
-
-## 📦 PR信息
-
-**PR编号**：#123
-**分支**：feature/xxx -> develop
-**作者**：
-**审查人**：
-
----
-
-## 📝 改动概述
-
-### 改动文件
-- `src/main/java/.../UserService.java`
-- `src/main/java/.../UserController.java`
-
-### 改动内容
-（简要说明改动点）
-
----
-
-## 🔍 审查要点
-
-### 1. 代码规范
-- [ ] 命名是否符合规范
-- [ ] 是否有多余的注释或缺失必要注释
-- [ ] 代码格式是否统一
-
-### 2. 业务逻辑
-- [ ] 逻辑是否正确
-- [ ] 边界条件是否处理
-- [ ] 异常情况是否处理
-
-### 3. 安全性
-- [ ] 是否有SQL注入风险
-- [ ] 是否有XSS风险
-- [ ] 敏感信息是否泄露
-
-### 4. 性能
-- [ ] 是否有N+1查询问题
-- [ ] 是否有不必要的循环
-- [ ] 大数据量是否有分页
-
-### 5. 可维护性
-- [ ] 是否符合分层规范
-- [ ] 是否易于扩展
-- [ ] 是否有重复代码
-
----
-
-## 💬 审查意见
-
-### 必须修改 🔴
-（严重问题，必须修改后再合并）
-
-### 建议修改 🟡
-（建议修改，但不是强制）
-
-### 可以通过 🟢
-（没有问题，可以合并）
-
----
-
-## ✅ 审查结论
-
-- [ ] **通过** - 可以合并
-- [ ] **需修改** - 需要修改后再审
-- [ ] **拒绝** - 不允许合并
-```
-
----
-
-### templates/test-prompt.md（测试用例模板）
-
-```markdown
-# 测试用例 Prompt 模板
-
-## 📋 测试范围
-
-**模块**：
-**测试类型**：单元测试/集成测试/系统测试
-**关联需求**：
-
----
-
-## 🧪 用例设计
-
-### 用例1：正常流程
-| 字段 | 内容 |
-|------|------|
-| 用例ID | TC-001 |
-| 用例名称 | xxx正常操作 |
-| 前置条件 | 用户已登录 |
-| 测试步骤 | 1. xxx 2. xxx 3. xxx |
-| 预期结果 | 显示xxx |
-
-### 用例2：异常流程
-| 字段 | 内容 |
-|------|------|
-| 用例ID | TC-002 |
-| 用例名称 | xxx异常情况 |
-| 前置条件 | xxx |
-| 测试步骤 | 1. xxx |
-| 预期结果 | 提示xxx |
-
----
-
-## 📊 测试结果
-
-| 用例ID | 执行结果 | 执行人 | 日期 |
-|--------|----------|--------|------|
-| TC-001 | ✅通过 | 张三 | 2024-01-01 |
-| TC-002 | ❌失败 | 张三 | 2024-01-01 |
-
-### 缺陷记录
-| 缺陷ID | 描述 | 严重程度 | 状态 |
-|--------|------|----------|------|
-| BUG-001 | xxx | P1 | 已修复 |
-```
-
----
-
-### knowledge/ADR-001-xxx.md（技术决策记录模板）
-
-```markdown
-# ADR-001 - 技术决策记录
-
-> ADR = Architecture Decision Record
-
-## 状态
-**提议中** / **已接受** / **已废弃** / **已被替代**
-
-## 背景
-（描述做出这个决策的背景）
-
-## 决策
-（描述做出的决策）
-
-## 方案对比
-
-### 方案A
-- 优点：xxx
-- 缺点：xxx
-
-### 方案B
-- 优点：xxx
-- 缺点：xxx
-
-### 方案C（最终选择）
-- 优点：xxx
-- 缺点：xxx
-
-## 后果
-- **正面**：xxx
-- **负面**：xxx
-- **风险**：xxx
-
-## 相关文档
-- 参考链接1
-- 参考链接2
-```
-
----
-
-## 🚀 使用方式
-
-### 1. 新项目初始化
 ```
 用户：帮我搭建项目记忆系统
-助手：请告诉我项目名称和技术栈，我来帮你生成完整的 memory-bank 目录结构
-```
+AI：请告诉我项目名称和技术栈
 
-### 2. 增量补充
-```
-用户：现有项目想加一个bug修复模板
-助手：直接生成 templates/bugfix-prompt.md 并告诉你怎么用
-```
-
-### 3. 自定义修改
-```
-用户：需要加一个部署文档模板
-助手：生成 templates/deploy-prompt.md 并集成到 INDEX.md
+用户：CRM系统，Java Spring Boot + MySQL
+AI：【生成完整的 memory-bank 目录结构 + 所有模板】
 ```
 
 ---
@@ -520,9 +463,6 @@ xxx
 | 选项 | 说明 | 默认值 |
 |------|------|--------|
 | 项目名 | memory-bank 父目录名 | {项目名}-memory-bank |
+| 记忆库路径 | 项目记忆库存放位置 | D:\xgq\kimi\memory-bank\{项目名} |
+| 助手名 | AI助手名称 | 挖挖 |
 | 语言 | 注释和文档语言 | 中文 |
-| 技术栈 | 决定目录结构和模板内容 | Java/Spring Boot |
-
----
-
-> 💡 **提示**：AGENTS.md 是核心，其他都是配套。按需启用，不必一次性创建所有文件。
