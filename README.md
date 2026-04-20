@@ -55,7 +55,8 @@ D:\xgq\work\skills-ai\
 ├── memory-bank/             # 🆕 项目记忆系统（AGENTS/模板/ADR）
 ├── karpathy-skills/       # 🆕 LLM编程避坑指南（Karpathy最佳实践）
 ├── hermes-experience/     # 🆕 经验沉淀系统（Do it once, Automate forever）
-└── cron-expression/      # 🆕 最强Cron表达式（生成/验证/多语言实现）
+├── cron-expression/      # 🆕 最强Cron表达式（生成/验证/多语言实现）
+└── skill-accelerator/   # 🆕 技能加速器·滑翔伞学习法（六阶段通用方法论）
 ```
 
 ---
@@ -71,7 +72,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（40个）
+## 🚀 已安装的 Skills（41个）
 
 ### 💼 工作类（7个）
 
@@ -91,7 +92,7 @@ D:\xgq\work\skills-ai\
 |----------|------|-----------|
 | **personality-test** | MBTI/九型人格/DISC/大五/星座/血型全套人格测试 | "MBTI"、"人格测试"、"九型人格"、"星座性格" |
 
-### 🔧 开发方法论类（7个）🆕
+### 🔧 开发方法论类（8个）🆕
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -105,6 +106,7 @@ D:\xgq\work\skills-ai\
 | **karpathy-skills** | LLM编程避坑：十大戒律/调试流程/提问模板 | karpathy-skills ⭐14.6K | 14.6K |
 | **hermes-experience** | 经验沉淀：patterns/snippets/rules，让AI越用越懂你 | hermes-agent ⭐62.8K | 62.8K |
 | **cron-expression** | 最强Cron：50+速查表/自然语言生成/Java+MySQL实现 | 自建 | - |
+| **skill-accelerator** | 技能加速器·滑翔伞学习法：六阶段通用方法论 | 自建 | - |
 
 ### 💼 工作类（6个）
 
