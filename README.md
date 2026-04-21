@@ -55,8 +55,11 @@ D:\xgq\work\skills-ai\
 ├── memory-bank/             # 🆕 项目记忆系统（AGENTS/模板/ADR）
 ├── karpathy-skills/       # 🆕 LLM编程避坑指南（Karpathy最佳实践）
 ├── hermes-experience/     # 🆕 经验沉淀系统（Do it once, Automate forever）
-├── cron-expression/      # 🆕 最强Cron表达式（生成/验证/多语言实现）
-└── skill-accelerator/   # 🆕 技能加速器·滑翔伞学习法（六阶段通用方法论）
+├── cron-expression/      # 最强Cron表达式（生成/验证/多语言实现）
+├── skill-accelerator/   # 技能加速器·滑翔伞学习法（六阶段通用方法论）
+├── api-doc-generator/   # 🆕 API文档生成器（Swagger/OpenAPI注解）
+├── git-commit/          # 🆕 Git提交规范生成器（Conventional Commits）
+└── browser-use/        # 🆕 浏览器自动化（Playwright网页操作）
 ```
 
 ---
@@ -72,9 +75,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（45个）
+## 🚀 已安装的 Skills（48个）
 
-### 🔧 开发方法论类（12个）
+### 🔧 开发方法论类（15个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -90,6 +93,9 @@ D:\xgq\work\skills-ai\
 | **hermes-experience** | 经验沉淀：patterns/snippets/rules，让AI越用越懂你 | hermes-agent ⭐62.8K | 62.8K |
 | **cron-expression** | 最强Cron：50+速查表/自然语言生成/Java+MySQL实现 | 自建 | - |
 | **skill-accelerator** | 技能加速器·滑翔伞学习法：六阶段通用方法论 | 自建 | - |
+| **api-doc-generator** | API文档生成：Swagger注解/@ApiOperation/字段说明/OpenAPI文档 | awesome-agent-skills | - |
+| **git-commit** | 规范化Git提交：Conventional Commits格式/多场景模板/分支命名规范 | awesome-agent-skills | - |
+| **browser-use** | 浏览器自动化：截图/填表/数据抓取/Playwright操作 | awesome-agent-skills | - |
 
 ### 💼 工作类（7个）
 
@@ -321,6 +327,10 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-09 | 🆕新增 | hermes-experience（经验沉淀系统） | hermes-agent |
 | 2026-04-18 | 🆕新增 | cron-expression（最强Cron表达式） | 自建 |
 | 2026-04-20 | 🆕新增 | skill-accelerator（技能加速器·滑翔伞学习法） | 自建 |
+| 2026-04-21 | 🆕新增 | ai-trend-radar（AI趋势雷达） | 自建 |
+| 2026-04-21 | 🆕新增 | api-doc-generator（API文档生成器） | awesome-agent-skills |
+| 2026-04-21 | 🆕新增 | git-commit（Git提交规范生成器） | awesome-agent-skills |
+| 2026-04-21 | 🆕新增 | browser-use（浏览器自动化） | awesome-agent-skills |
 
 ---
 
