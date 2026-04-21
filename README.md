@@ -57,9 +57,10 @@ D:\xgq\work\skills-ai\
 ├── hermes-experience/     # 🆕 经验沉淀系统（Do it once, Automate forever）
 ├── cron-expression/      # 最强Cron表达式（生成/验证/多语言实现）
 ├── skill-accelerator/   # 技能加速器·滑翔伞学习法（六阶段通用方法论）
-├── api-doc-generator/   # 🆕 API文档生成器（Swagger/OpenAPI注解）
-├── git-commit/          # 🆕 Git提交规范生成器（Conventional Commits）
-└── browser-use/        # 🆕 浏览器自动化（Playwright网页操作）
+├── api-doc-generator/   # API文档生成器（Swagger/OpenAPI注解）
+├── git-commit/          # Git提交规范生成器（Conventional Commits）
+├── browser-use/        # 浏览器自动化（Playwright网页操作）
+└── database-designer/  # 🆕 数据库设计器（ERD/Mermaid + MySQL DDL + Java Entity）
 ```
 
 ---
@@ -75,9 +76,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（48个）
+## 🚀 已安装的 Skills（49个）
 
-### 🔧 开发方法论类（15个）
+### 🔧 开发方法论类（16个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -96,6 +97,7 @@ D:\xgq\work\skills-ai\
 | **api-doc-generator** | API文档生成：Swagger注解/@ApiOperation/字段说明/OpenAPI文档 | awesome-agent-skills | - |
 | **git-commit** | 规范化Git提交：Conventional Commits格式/多场景模板/分支命名规范 | awesome-agent-skills | - |
 | **browser-use** | 浏览器自动化：截图/填表/数据抓取/Playwright操作 | awesome-agent-skills | - |
+| **database-designer** | 数据库设计：ERD/Mermaid图 + MySQL DDL + Java Entity + 索引优化 + 零停机迁移 | superno/claude-skills-sup (GitHub) | - |
 
 ### 💼 工作类（7个）
 
@@ -331,6 +333,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-21 | 🆕新增 | api-doc-generator（API文档生成器） | awesome-agent-skills |
 | 2026-04-21 | 🆕新增 | git-commit（Git提交规范生成器） | awesome-agent-skills |
 | 2026-04-21 | 🆕新增 | browser-use（浏览器自动化） | awesome-agent-skills |
+| 2026-04-21 | 🆕新增 | database-designer（数据库设计器） | superno/claude-skills-sup |
 
 ---
 
