@@ -61,7 +61,8 @@ D:\xgq\work\skills-ai\
 ├── git-commit/          # Git提交规范生成器（Conventional Commits）
 ├── browser-use/        # 浏览器自动化（Playwright网页操作）
 ├── database-designer/  # 数据库设计器（ERD/Mermaid + MySQL DDL + Java Entity）
-└── erd-document/      # 🆕 完整系统设计文档（Word/PDF，11章节ERD文档）
+├── erd-document/      # 完整系统设计文档（Word/PDF，11章节ERD文档）
+└── openspec-sdd/     # 🆕 规范驱动开发（OpenSpec六阶段+SDD+Gherkin验收场景）
 ```
 
 ---
@@ -77,9 +78,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（50个）
+## 🚀 已安装的 Skills（51个）
 
-### 🔧 开发方法论类（17个）
+### 🔧 开发方法论类（18个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -100,6 +101,7 @@ D:\xgq\work\skills-ai\
 | **browser-use** | 浏览器自动化：截图/填表/数据抓取/Playwright操作 | awesome-agent-skills | - |
 | **database-designer** | 数据库设计：ERD/Mermaid图 + MySQL DDL + Java Entity + 索引优化 + 零停机迁移 | superno/claude-skills-sup (GitHub) | - |
 | **erd-document** | 完整系统设计文档：Word/PDF（11章节：ERD+DDL+接口+定时任务+安全+性能） | 自建 | - |
+| **openspec-sdd** | 规范驱动开发：OpenSpec六阶段工作流+SDD+Gherkin验收场景+任务分解 | OpenSpec (Fission-AI) | - |
 
 ### 💼 工作类（7个）
 
@@ -337,6 +339,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-21 | 🆕新增 | browser-use（浏览器自动化） | awesome-agent-skills |
 | 2026-04-21 | 🆕新增 | database-designer（数据库设计器） | superno/claude-skills-sup |
 | 2026-04-21 | 🆕新增 | erd-document（完整系统设计文档） | 自建 |
+| 2026-04-21 | 🆕新增 | openspec-sdd（OpenSpec规范驱动开发） | Fission-AI/OpenSpec |
 
 ---
 
