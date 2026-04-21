@@ -60,7 +60,8 @@ D:\xgq\work\skills-ai\
 ├── api-doc-generator/   # API文档生成器（Swagger/OpenAPI注解）
 ├── git-commit/          # Git提交规范生成器（Conventional Commits）
 ├── browser-use/        # 浏览器自动化（Playwright网页操作）
-└── database-designer/  # 🆕 数据库设计器（ERD/Mermaid + MySQL DDL + Java Entity）
+├── database-designer/  # 数据库设计器（ERD/Mermaid + MySQL DDL + Java Entity）
+└── erd-document/      # 🆕 完整系统设计文档（Word/PDF，11章节ERD文档）
 ```
 
 ---
@@ -76,9 +77,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（49个）
+## 🚀 已安装的 Skills（50个）
 
-### 🔧 开发方法论类（16个）
+### 🔧 开发方法论类（17个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -98,6 +99,7 @@ D:\xgq\work\skills-ai\
 | **git-commit** | 规范化Git提交：Conventional Commits格式/多场景模板/分支命名规范 | awesome-agent-skills | - |
 | **browser-use** | 浏览器自动化：截图/填表/数据抓取/Playwright操作 | awesome-agent-skills | - |
 | **database-designer** | 数据库设计：ERD/Mermaid图 + MySQL DDL + Java Entity + 索引优化 + 零停机迁移 | superno/claude-skills-sup (GitHub) | - |
+| **erd-document** | 完整系统设计文档：Word/PDF（11章节：ERD+DDL+接口+定时任务+安全+性能） | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -334,6 +336,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-21 | 🆕新增 | git-commit（Git提交规范生成器） | awesome-agent-skills |
 | 2026-04-21 | 🆕新增 | browser-use（浏览器自动化） | awesome-agent-skills |
 | 2026-04-21 | 🆕新增 | database-designer（数据库设计器） | superno/claude-skills-sup |
+| 2026-04-21 | 🆕新增 | erd-document（完整系统设计文档） | 自建 |
 
 ---
 
