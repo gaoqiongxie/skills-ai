@@ -72,7 +72,24 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（41个）
+## 🚀 已安装的 Skills（45个）
+
+### 🔧 开发方法论类（12个）
+
+| Skill名称 | 功能 | 来源 | Stars |
+|----------|------|------|-------|
+| **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
+| **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
+| **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
+| **brainstorming** | 结构化头脑风暴，编码前思考 | obra/superpowers | 142K |
+| **writing-plans** | 详细实施计划生成 | obra/superpowers | 142K |
+| **confidence-check** | AI自我置信度评估 | Top 20 Skills | 19.8K |
+| **memory-system** | 记忆系统：Redis缓存/多级缓存/分布式Session/消息队列 | 自建 | - |
+| **memory-bank** | 项目记忆系统：AGENTS/INDEX/模板/ADR文档结构 | 自建 | - |
+| **karpathy-skills** | LLM编程避坑：十大戒律/调试流程/提问模板 | karpathy-skills ⭐14.6K | 14.6K |
+| **hermes-experience** | 经验沉淀：patterns/snippets/rules，让AI越用越懂你 | hermes-agent ⭐62.8K | 62.8K |
+| **cron-expression** | 最强Cron：50+速查表/自然语言生成/Java+MySQL实现 | 自建 | - |
+| **skill-accelerator** | 技能加速器·滑翔伞学习法：六阶段通用方法论 | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -84,40 +101,13 @@ D:\xgq\work\skills-ai\
 | **leave-request** | 生成得体又易批准的请假话术 | "怎么请假"、"请假理由" |
 | **elevator-pitch** | 30秒/1分钟电梯演讲生成 | "电梯演讲"、"一句话介绍" |
 | **argue-winner** | 应对客户投诉/甩锅/PUA | "吵架"、"怎么回击"、"被甩锅" |
-| **bs-translator** | 把大白话翻译成听不懂的版本 🆕 | "废话"、"听不懂人话"、"翻译成人话" |
+| **bs-translator** | 把大白话翻译成听不懂的版本 | "废话"、"听不懂人话"、"翻译成人话" |
 
-### 🧠 人格测试类（1个）🆕
+### 🧠 人格测试类（1个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
 | **personality-test** | MBTI/九型人格/DISC/大五/星座/血型全套人格测试 | "MBTI"、"人格测试"、"九型人格"、"星座性格" |
-
-### 🔧 开发方法论类（8个）🆕
-
-| Skill名称 | 功能 | 来源 | Stars |
-|----------|------|------|-------|
-| **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
-| **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
-| **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
-| **brainstorming** | 结构化头脑风暴，编码前思考 | obra/superpowers | 142K |
-| **confidence-check** | AI自我置信度评估 | Top 20 Skills | 19.8K |
-| **memory-system** | 记忆系统：Redis缓存/多级缓存/分布式Session/消息队列 | 自建 | - |
-| **memory-bank** | 项目记忆系统：AGENTS/INDEX/模板/ADR文档结构 | 自建 | - |
-| **karpathy-skills** | LLM编程避坑：十大戒律/调试流程/提问模板 | karpathy-skills ⭐14.6K | 14.6K |
-| **hermes-experience** | 经验沉淀：patterns/snippets/rules，让AI越用越懂你 | hermes-agent ⭐62.8K | 62.8K |
-| **cron-expression** | 最强Cron：50+速查表/自然语言生成/Java+MySQL实现 | 自建 | - |
-| **skill-accelerator** | 技能加速器·滑翔伞学习法：六阶段通用方法论 | 自建 | - |
-
-### 💼 工作类（6个）
-
-| Skill名称 | 功能 | 触发关键词 |
-|----------|------|-----------|
-| **anti-pua** | 职场反PUA话术，怼回老板的精神控制 | "老板说"、"怎么怼"、"被PUA了" |
-| **meeting-notes** | 把混乱会议记录整理成正式纪要 | "整理会议纪要"、"会议记录太乱" |
-| **weekly-report** | 根据工作内容生成简洁专业周报 | "写周报"、"本周工作总结" |
-| **leave-request** | 生成得体又易批准的请假话术 | "怎么请假"、"请假理由" |
-| **elevator-pitch** | 30秒/1分钟电梯演讲生成 | "电梯演讲"、"一句话介绍" |
-| **argue-winner** | 应对客户投诉/甩锅/PUA | "吵架"、"怎么回击"、"被甩锅" |
 
 ### 🎨 生活类（4个）
 
@@ -155,7 +145,7 @@ D:\xgq\work\skills-ai\
 | **horoscope** | 星座运势+趣味抽签 | "星座"、"抽签"、"运势" |
 | **emoji-translator** | emoji解读+翻译 | "emoji翻译"、"这个表情什么意思" |
 
-### 🧠 思考类（4个）
+### 🧠 思考类（5个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -321,6 +311,16 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-09 | 🆕新增 | confidence-check（置信度评估） | Top 20 Skills |
 | 2026-04-09 | 🆕新增 | brainstorming（结构化头脑风暴） | obra/superpowers (142K) |
 | 2026-04-09 | 🆕新增 | writing-plans（详细实施计划） | obra/superpowers (142K) |
+| 2026-04-09 | 🆕新增 | idiom-chain（成语接龙） | 原创 |
+| 2026-04-09 | 🆕新增 | feihua-ling（飞花令） | 原创 |
+| 2026-04-09 | 🆕新增 | bs-translator（废话翻译官） | 原创 |
+| 2026-04-09 | 🆕新增 | personality-test（人格测试大全） | 原创 |
+| 2026-04-09 | 🆕新增 | memory-system（记忆系统） | 自建 |
+| 2026-04-09 | 🆕新增 | memory-bank（项目记忆系统） | 自建 |
+| 2026-04-09 | 🆕新增 | karpathy-skills（LLM编程避坑） | karpathy-skills |
+| 2026-04-09 | 🆕新增 | hermes-experience（经验沉淀系统） | hermes-agent |
+| 2026-04-18 | 🆕新增 | cron-expression（最强Cron表达式） | 自建 |
+| 2026-04-20 | 🆕新增 | skill-accelerator（技能加速器·滑翔伞学习法） | 自建 |
 
 ---
 
