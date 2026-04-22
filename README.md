@@ -19,6 +19,7 @@ D:\xgq\work\skills-ai\
 ├── gift-advisor/                 # 礼物参谋
 ├── outfit-weather/               # 穿搭天气助手
 ├── recipe-random/               # 菜谱随机抽
+├── travel-planner/              # 🆕 旅行规划师·国内游（行程/住宿/美食/预算/攻略）
 ├── meeting-notes/                # 会议纪要整理助手
 ├── weekly-report/               # 周报生成器
 ├── leave-request/               # 请假话术助手
@@ -78,7 +79,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（51个）
+## 🚀 已安装的 Skills（52个）
 
 ### 🔧 开发方法论类（18个）
 
@@ -121,7 +122,7 @@ D:\xgq\work\skills-ai\
 |----------|------|-----------|
 | **personality-test** | MBTI/九型人格/DISC/大五/星座/血型全套人格测试 | "MBTI"、"人格测试"、"九型人格"、"星座性格" |
 
-### 🎨 生活类（4个）
+### 🎨 生活类（5个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -129,6 +130,7 @@ D:\xgq\work\skills-ai\
 | **gift-advisor** | 根据关系/预算推荐贴心礼物 | "送什么礼物"、"生日礼物" |
 | **outfit-weather** | 根据天气和场合给出穿搭建议 | "明天穿什么"、"穿搭建议" |
 | **recipe-random** | 冰箱里有啥？帮你想菜谱 | "做什么菜"、"菜谱随机" |
+| **travel-planner** | 国内游全能规划：行程/住宿/美食/预算/交通/打包清单 | "旅行计划"、"旅游攻略"、"出行规划"、"帮我规划行程" |
 
 ### 📚 学习类（4个）
 
@@ -340,6 +342,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-21 | 🆕新增 | database-designer（数据库设计器） | superno/claude-skills-sup |
 | 2026-04-21 | 🆕新增 | erd-document（完整系统设计文档） | 自建 |
 | 2026-04-21 | 🆕新增 | openspec-sdd（OpenSpec规范驱动开发） | Fission-AI/OpenSpec |
+| 2026-04-22 | 🆕新增 | travel-planner（旅行规划师·国内游） | 自建 |
 
 ---
 
