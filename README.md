@@ -73,7 +73,8 @@ D:\xgq\work\skills-ai\
 ├── weather-pro/       # 🆕 专业气象分析师（农业/航空/航海多场景）
 ├── bmad-method/       # 🆕 AI驱动敏捷开发（一人顶一团队，多角色协作）
 ├── ai-dlc/            # 🆕 AI驱动开发生命周期（四阶段闭环+质量门控+Hat-based）
-└── prompt-driven-dev/ # 🆕 提示驱动开发（提示词版本化+确定性生成+Prompt as Code）
+├── prompt-driven-dev/ # 🆕 提示驱动开发（提示词版本化+确定性生成+Prompt as Code）
+└── prd-to-demo/       # 🆕 PRD转可交互原型（根据需求文档生成HTML原型Demo）
 ```
 
 ---
@@ -94,9 +95,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（65个）
+## 🚀 已安装的 Skills（66个）
 
-### 🔧 开发方法论类（24个）
+### 🔧 开发方法论类（25个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -125,6 +126,7 @@ D:\xgq\work\skills-ai\
 | **bmad-method** | AI驱动敏捷开发：一人顶一团队，多角色协作，文档分片+上下文工程 | bmad-code-org | - |
 | **ai-dlc** | AI驱动开发生命周期：四阶段闭环+Hat-based角色+Backpressure质量门控 | TheBushidoCollective | - |
 | **prompt-driven-dev** | 提示驱动开发：提示词版本化+确定性生成+Prompt as Code | 社区实践 | - |
+| **prd-to-demo** | PRD转可交互原型：根据需求文档自动生成HTML原型Demo | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -385,6 +387,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | bmad-method（AI驱动敏捷开发） | bmad-code-org（多角色协作框架） |
 | 2026-04-29 | 🆕新增 | ai-dlc（AI驱动开发生命周期） | TheBushidoCollective（四阶段+质量门控） |
 | 2026-04-29 | 🆕新增 | prompt-driven-dev（提示驱动开发） | 社区实践（提示词版本化+确定性生成） |
+| 2026-04-29 | 🆕新增 | prd-to-demo（PRD转可交互原型） | 自建（根据PRD生成HTML原型Demo） |
 
 ---
 
