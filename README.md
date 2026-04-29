@@ -71,7 +71,9 @@ D:\xgq\work\skills-ai\
 ├── skill-creator/     # 🆕 Skill创造者（元技能：创建/测试/优化Skills）
 ├── claude-mem/        # 🆕 跨会话持久记忆（自动捕获/压缩/检索，GitHub Trending #3）
 ├── weather-pro/       # 🆕 专业气象分析师（农业/航空/航海多场景）
-└── bmad-method/       # 🆕 AI驱动敏捷开发（一人顶一团队，多角色协作）
+├── bmad-method/       # 🆕 AI驱动敏捷开发（一人顶一团队，多角色协作）
+├── ai-dlc/            # 🆕 AI驱动开发生命周期（四阶段闭环+质量门控+Hat-based）
+└── prompt-driven-dev/ # 🆕 提示驱动开发（提示词版本化+确定性生成+Prompt as Code）
 ```
 
 ---
@@ -92,9 +94,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（63个）
+## 🚀 已安装的 Skills（65个）
 
-### 🔧 开发方法论类（22个）
+### 🔧 开发方法论类（24个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -121,6 +123,8 @@ D:\xgq\work\skills-ai\
 | **claude-mem** | 跨会话持久记忆：自动捕获/AI压缩/向量检索/渐进式披露 | thedotmack/claude-mem | 65K+ |
 | **weather-pro** | 专业气象分析师：多数据源/农业航空航海/趋势预测/灾害预警 | 自建 | - |
 | **bmad-method** | AI驱动敏捷开发：一人顶一团队，多角色协作，文档分片+上下文工程 | bmad-code-org | - |
+| **ai-dlc** | AI驱动开发生命周期：四阶段闭环+Hat-based角色+Backpressure质量门控 | TheBushidoCollective | - |
+| **prompt-driven-dev** | 提示驱动开发：提示词版本化+确定性生成+Prompt as Code | 社区实践 | - |
 
 ### 💼 工作类（7个）
 
@@ -379,6 +383,8 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | claude-mem（跨会话持久记忆） | thedotmack/claude-mem ⭐65K+（本周Trending #3） |
 | 2026-04-29 | 🆕新增 | weather-pro（专业气象分析师） | 自建（农业/航空/航海/灾害预警） |
 | 2026-04-29 | 🆕新增 | bmad-method（AI驱动敏捷开发） | bmad-code-org（多角色协作框架） |
+| 2026-04-29 | 🆕新增 | ai-dlc（AI驱动开发生命周期） | TheBushidoCollective（四阶段+质量门控） |
+| 2026-04-29 | 🆕新增 | prompt-driven-dev（提示驱动开发） | 社区实践（提示词版本化+确定性生成） |
 
 ---
 
