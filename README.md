@@ -20,6 +20,9 @@ D:\xgq\work\skills-ai\
 ├── outfit-weather/               # 穿搭天气助手
 ├── recipe-random/               # 菜谱随机抽
 ├── travel-planner/              # 🆕 旅行规划师·国内游（行程/住宿/美食/预算/攻略）
+├── html-ppt-skill/              # 🆕 HTML PPT生成器（36主题/31布局/47动画，无需PowerPoint）
+├── diagram-design/              # 🆕 编辑级图表设计（13种图表类型，纯HTML+SVG，拒绝Mermaid）
+├── huashu-design/               # 🆕 花叔HTML设计（20种设计哲学/5维评审/31布局/品牌识别）
 ├── meeting-notes/                # 会议纪要整理助手
 ├── weekly-report/               # 周报生成器
 ├── leave-request/               # 请假话术助手
@@ -63,7 +66,10 @@ D:\xgq\work\skills-ai\
 ├── browser-use/        # 浏览器自动化（Playwright网页操作）
 ├── database-designer/  # 数据库设计器（ERD/Mermaid + MySQL DDL + Java Entity）
 ├── erd-document/      # 完整系统设计文档（Word/PDF，11章节ERD文档）
-└── openspec-sdd/     # 🆕 规范驱动开发（OpenSpec六阶段+SDD+Gherkin验收场景）
+├── openspec-sdd/     # 🆕 规范驱动开发（OpenSpec六阶段+SDD+Gherkin验收场景）
+├── frontend-design/   # 🆕 前端设计规范（拒绝AI slop，6大视觉方向）
+├── skill-creator/     # 🆕 Skill创造者（元技能：创建/测试/优化Skills）
+└── claude-mem/        # 🆕 跨会话持久记忆（自动捕获/压缩/检索，GitHub Trending #3）
 ```
 
 ---
@@ -76,12 +82,17 @@ D:\xgq\work\skills-ai\
 | **Anthropic官方Skills** | ⭐ 114K | docx, pdf, pptx, xlsx (官方文档处理) |
 | **skills.sh find-skills** | 418K安装 | skill-lookup (元技能理念) |
 | **Top 20 Claude Code** | 169.7K | confidence-check, create-pr (自动化理念) |
+| **forrestchang/andrej-karpathy-skills** | ⭐ **71.8K**（本周+44K🔥） | karpathy-skills (LLM编程避坑) |
+| **alchaincyf/huashu-design** | ⭐ 2,839（本周新晋） | huashu-design (HTML原生设计) |
+| **lewislulu/html-ppt-skill** | ⭐ 1,754（本周新晋） | html-ppt-skill (HTML PPT生成) |
+| **cathrynlavery/diagram-design** | ⭐ 1,320（本周新晋） | diagram-design (编辑级图表) |
+| **thedotmack/claude-mem** | ⭐ 65K+（本周Trending #3，单周+12K🔥） | claude-mem (跨会话持久记忆) |
 
 ---
 
-## 🚀 已安装的 Skills（52个）
+## 🚀 已安装的 Skills（58个）
 
-### 🔧 开发方法论类（18个）
+### 🔧 开发方法论类（21个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -103,6 +114,9 @@ D:\xgq\work\skills-ai\
 | **database-designer** | 数据库设计：ERD/Mermaid图 + MySQL DDL + Java Entity + 索引优化 + 零停机迁移 | superno/claude-skills-sup (GitHub) | - |
 | **erd-document** | 完整系统设计文档：Word/PDF（11章节：ERD+DDL+接口+定时任务+安全+性能） | 自建 | - |
 | **openspec-sdd** | 规范驱动开发：OpenSpec六阶段工作流+SDD+Gherkin验收场景+任务分解 | OpenSpec (Fission-AI) | - |
+| **frontend-design** | 前端设计规范：拒绝AI slop，6大视觉方向（Brutalist/Editorial/Retro等） | Anthropic 官方 | 100K+ installs |
+| **skill-creator** | Skill创造者：元技能，创建/测试/优化Skills，含Eval框架 | Anthropic 官方 | 官方内置 |
+| **claude-mem** | 跨会话持久记忆：自动捕获/AI压缩/向量检索/渐进式披露 | thedotmack/claude-mem | 65K+ |
 
 ### 💼 工作类（7个）
 
@@ -178,6 +192,14 @@ D:\xgq\work\skills-ai\
 | **home-design** | 装修风格灵感 | "装修灵感"、"北欧风" |
 | **plant-care** | 绿植养护指南 | "绿植养护"、"植物怎么养" |
 | **home-storage** | 家居收纳指南 | "收纳"、"整理房间" |
+
+### 🎨 设计类（3个）🆕
+
+| Skill名称 | 功能 | 来源 | 触发关键词 |
+|----------|------|------|-----------|
+| **html-ppt-skill** | HTML PPT生成，36主题/31布局/47动画，无需PowerPoint | lewislulu/html-ppt-skill ⭐1.7K | "做PPT"、"生成演示文稿"、"做汇报材料"、"做幻灯片" |
+| **diagram-design** | 编辑级图表设计，13种图表类型，纯HTML+SVG，拒绝Mermaid | cathrynlavery/diagram-design ⭐1.3K | "画架构图"、"画流程图"、"生成图表"、"做一张图" |
+| **huashu-design** | 花叔HTML原生设计，20种设计哲学/5维评审/品牌识别 | alchaincyf/huashu-design ⭐2.8K | "做网页"、"设计界面"、"做落地页"、"做活动页" |
 
 ---
 
@@ -343,6 +365,13 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-21 | 🆕新增 | erd-document（完整系统设计文档） | 自建 |
 | 2026-04-21 | 🆕新增 | openspec-sdd（OpenSpec规范驱动开发） | Fission-AI/OpenSpec |
 | 2026-04-22 | 🆕新增 | travel-planner（旅行规划师·国内游） | 自建 |
+| 2026-04-29 | 🆕新增 | html-ppt-skill（HTML PPT生成器） | lewislulu/html-ppt-skill ⭐1.7K（本周热门） |
+| 2026-04-29 | 🆕新增 | diagram-design（编辑级图表设计） | cathrynlavery/diagram-design ⭐1.3K（本周热门） |
+| 2026-04-29 | 🆕新增 | huashu-design（花叔HTML设计） | alchaincyf/huashu-design ⭐2.8K（本周热门） |
+| 2026-04-29 | 🔄更新 | karpathy-skills（Star数更新 14.6K→71.8K） | 本周Trending #1，单周+44K |
+| 2026-04-29 | 🆕新增 | frontend-design（前端设计规范） | Anthropic 官方 100K+ installs |
+| 2026-04-29 | 🆕新增 | skill-creator（Skill创造者·元技能） | Anthropic 官方内置 |
+| 2026-04-29 | 🆕新增 | claude-mem（跨会话持久记忆） | thedotmack/claude-mem ⭐65K+（本周Trending #3） |
 
 ---
 
