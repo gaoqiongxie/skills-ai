@@ -1,7 +1,7 @@
 # Karpathy LLM 编程避坑指南
 
 > 灵感来源：Andrej Karpathy 的 LLM 编程最佳实践
-> GitHub: https://github.com/forrestchang/andrej-karpathy-skills ⭐14.6K
+> GitHub: https://github.com/forrestchang/andrej-karpathy-skills ⭐71.8K（本周新增+44K，登上 Trending #1）
 > 触发关键词：LLM编程规范、代码避坑、AI编程技巧、写代码规范
 
 ---
