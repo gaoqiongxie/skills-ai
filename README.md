@@ -69,7 +69,8 @@ D:\xgq\work\skills-ai\
 ├── openspec-sdd/     # 🆕 规范驱动开发（OpenSpec六阶段+SDD+Gherkin验收场景）
 ├── frontend-design/   # 🆕 前端设计规范（拒绝AI slop，6大视觉方向）
 ├── skill-creator/     # 🆕 Skill创造者（元技能：创建/测试/优化Skills）
-└── claude-mem/        # 🆕 跨会话持久记忆（自动捕获/压缩/检索，GitHub Trending #3）
+├── claude-mem/        # 🆕 跨会话持久记忆（自动捕获/压缩/检索，GitHub Trending #3）
+└── weather-pro/       # 🆕 专业气象分析师（农业/航空/航海多场景）
 ```
 
 ---
@@ -90,7 +91,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（58个）
+## 🚀 已安装的 Skills（59个）
 
 ### 🔧 开发方法论类（21个）
 
@@ -136,7 +137,7 @@ D:\xgq\work\skills-ai\
 |----------|------|-----------|
 | **personality-test** | MBTI/九型人格/DISC/大五/星座/血型全套人格测试 | "MBTI"、"人格测试"、"九型人格"、"星座性格" |
 
-### 🎨 生活类（5个）
+### 🎨 生活类（6个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -145,6 +146,7 @@ D:\xgq\work\skills-ai\
 | **outfit-weather** | 根据天气和场合给出穿搭建议 | "明天穿什么"、"穿搭建议" |
 | **recipe-random** | 冰箱里有啥？帮你想菜谱 | "做什么菜"、"菜谱随机" |
 | **travel-planner** | 国内游全能规划：行程/住宿/美食/预算/交通/打包清单 | "旅行计划"、"旅游攻略"、"出行规划"、"帮我规划行程" |
+| **weather-pro** | 专业气象分析：农业/航空/航海/灾害预警/气候趋势 | "分析天气"、"气象数据"、"农业气象"、"飞行气象"、"台风分析" |
 
 ### 📚 学习类（4个）
 
@@ -372,6 +374,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | frontend-design（前端设计规范） | Anthropic 官方 100K+ installs |
 | 2026-04-29 | 🆕新增 | skill-creator（Skill创造者·元技能） | Anthropic 官方内置 |
 | 2026-04-29 | 🆕新增 | claude-mem（跨会话持久记忆） | thedotmack/claude-mem ⭐65K+（本周Trending #3） |
+| 2026-04-29 | 🆕新增 | weather-pro（专业气象分析师） | 自建（农业/航空/航海/灾害预警） |
 
 ---
 
