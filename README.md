@@ -70,7 +70,8 @@ D:\xgq\work\skills-ai\
 ├── frontend-design/   # 🆕 前端设计规范（拒绝AI slop，6大视觉方向）
 ├── skill-creator/     # 🆕 Skill创造者（元技能：创建/测试/优化Skills）
 ├── claude-mem/        # 🆕 跨会话持久记忆（自动捕获/压缩/检索，GitHub Trending #3）
-└── weather-pro/       # 🆕 专业气象分析师（农业/航空/航海多场景）
+├── weather-pro/       # 🆕 专业气象分析师（农业/航空/航海多场景）
+└── bmad-method/       # 🆕 AI驱动敏捷开发（一人顶一团队，多角色协作）
 ```
 
 ---
@@ -91,9 +92,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（59个）
+## 🚀 已安装的 Skills（63个）
 
-### 🔧 开发方法论类（21个）
+### 🔧 开发方法论类（22个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -118,6 +119,8 @@ D:\xgq\work\skills-ai\
 | **frontend-design** | 前端设计规范：拒绝AI slop，6大视觉方向（Brutalist/Editorial/Retro等） | Anthropic 官方 | 100K+ installs |
 | **skill-creator** | Skill创造者：元技能，创建/测试/优化Skills，含Eval框架 | Anthropic 官方 | 官方内置 |
 | **claude-mem** | 跨会话持久记忆：自动捕获/AI压缩/向量检索/渐进式披露 | thedotmack/claude-mem | 65K+ |
+| **weather-pro** | 专业气象分析师：多数据源/农业航空航海/趋势预测/灾害预警 | 自建 | - |
+| **bmad-method** | AI驱动敏捷开发：一人顶一团队，多角色协作，文档分片+上下文工程 | bmad-code-org | - |
 
 ### 💼 工作类（7个）
 
@@ -375,6 +378,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | skill-creator（Skill创造者·元技能） | Anthropic 官方内置 |
 | 2026-04-29 | 🆕新增 | claude-mem（跨会话持久记忆） | thedotmack/claude-mem ⭐65K+（本周Trending #3） |
 | 2026-04-29 | 🆕新增 | weather-pro（专业气象分析师） | 自建（农业/航空/航海/灾害预警） |
+| 2026-04-29 | 🆕新增 | bmad-method（AI驱动敏捷开发） | bmad-code-org（多角色协作框架） |
 
 ---
 
