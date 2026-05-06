@@ -75,7 +75,8 @@ D:\xgq\work\skills-ai\
 ├── ai-dlc/            # 🆕 AI驱动开发生命周期（四阶段闭环+质量门控+Hat-based）
 ├── prompt-driven-dev/ # 🆕 提示驱动开发（提示词版本化+确定性生成+Prompt as Code）
 ├── prd-to-demo/       # 🆕 PRD转可交互原型（根据需求文档生成HTML原型Demo）
-└── screenshot-to-prototype/ # 🆕 截图转可交互原型（设计稿/草图自动生成HTML原型）
+├── screenshot-to-prototype/ # 🆕 截图转可交互原型（设计稿/草图自动生成HTML原型）
+└── skill-orchestrator/ # 🆕 Skill编排器（67个Skill的统一入口，智能匹配+工作流推荐）
 ```
 
 ---
@@ -96,12 +97,13 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（67个）
+## 🚀 已安装的 Skills（68个）
 
-### 🔧 开发方法论类（26个）
+### 🔧 开发方法论类（27个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
+| **skill-orchestrator** | ⭐ Skill编排器：67个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
 | **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
 | **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
 | **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
@@ -391,6 +393,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | prompt-driven-dev（提示驱动开发） | 社区实践（提示词版本化+确定性生成） |
 | 2026-04-29 | 🆕新增 | prd-to-demo（PRD转可交互原型） | 自建（根据PRD生成HTML原型Demo） |
 | 2026-04-29 | 🆕新增 | screenshot-to-prototype（截图转可交互原型） | 自建（设计稿/草图自动还原HTML原型） |
+| 2026-04-29 | 🆕新增 | skill-orchestrator（Skill编排器·统一入口） | 自建（67个Skill智能匹配+标准工作流推荐） |
 
 ---
 
