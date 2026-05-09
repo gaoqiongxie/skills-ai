@@ -76,7 +76,11 @@ D:\xgq\work\skills-ai\
 ├── prompt-driven-dev/ # 🆕 提示驱动开发（提示词版本化+确定性生成+Prompt as Code）
 ├── prd-to-demo/       # 🆕 PRD转可交互原型（根据需求文档生成HTML原型Demo）
 ├── screenshot-to-prototype/ # 🆕 截图转可交互原型（设计稿/草图自动生成HTML原型）
-└── skill-orchestrator/ # 🆕 Skill编排器（67个Skill的统一入口，智能匹配+工作流推荐）
+├── skill-orchestrator/ # 🆕 Skill编排器（67个Skill的统一入口，智能匹配+工作流推荐）
+├── caveman-skill/     # 🆕 洞穴人Token优化（削减75%token消耗，保持技术准确）
+├── supermemory/       # 🆕 跨会话持久记忆（自动加载上下文，LongMemEval基准领先）
+├── multi-agent-orchestration/ # 🆕 多Agent编排框架（并行执行，worktree隔离）
+└── security-audit/    # 🆕 安全审计工作流（CodeQL/Semgrep，OWASP Top 10覆盖）
 ```
 
 ---
@@ -97,9 +101,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（68个）
+## 🚀 已安装的 Skills（72个）
 
-### 🔧 开发方法论类（27个）
+### 🔧 开发方法论类（32个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -131,6 +135,10 @@ D:\xgq\work\skills-ai\
 | **prompt-driven-dev** | 提示驱动开发：提示词版本化+确定性生成+Prompt as Code | 社区实践 | - |
 | **prd-to-demo** | PRD转可交互原型：根据需求文档自动生成HTML原型Demo | 自建 | - |
 | **screenshot-to-prototype** | 截图转可交互原型：设计稿/草图/竞品截图自动还原为HTML原型 | 自建 | - |
+| **caveman-skill** | 🆕 洞穴人Token优化：削减75%输出token，压缩记忆文件46%，GitHub viral | juliusbrussee/caveman | viral |
+| **supermemory** | 🆕 跨会话持久记忆：自动加载上下文，向量检索，LongMemEval基准领先 | SuperMemory | - |
+| **multi-agent-orchestration** | 🆕 多Agent编排：并行执行，worktree隔离，AI团队协作框架 | oh-my-claudecode | 26K+ |
+| **security-audit** | 🆕 安全审计：CodeQL/Semgrep集成，OWASP Top 10漏洞识别与修复 | trailofbits/skills | - |
 
 ### 💼 工作类（7个）
 
@@ -394,6 +402,10 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | prd-to-demo（PRD转可交互原型） | 自建（根据PRD生成HTML原型Demo） |
 | 2026-04-29 | 🆕新增 | screenshot-to-prototype（截图转可交互原型） | 自建（设计稿/草图自动还原HTML原型） |
 | 2026-04-29 | 🆕新增 | skill-orchestrator（Skill编排器·统一入口） | 自建（67个Skill智能匹配+标准工作流推荐） |
+| 2026-05-09 | 🆕新增 | caveman-skill（洞穴人Token优化·GitHub viral） | juliusbrussee/caveman（削减75%token） |
+| 2026-05-09 | 🆕新增 | supermemory（跨会话持久记忆） | LongMemEval/LoCoMo基准领先 |
+| 2026-05-09 | 🆕新增 | multi-agent-orchestration（多Agent编排框架） | oh-my-claudecode（26K+⭐） |
+| 2026-05-09 | 🆕新增 | security-audit（安全审计工作流） | trailofbits/skills（CodeQL/Semgrep） |
 
 ---
 
