@@ -80,7 +80,15 @@ D:\xgq\work\skills-ai\
 ├── caveman-skill/     # 🆕 洞穴人Token优化（削减75%token消耗，保持技术准确）
 ├── supermemory/       # 🆕 跨会话持久记忆（自动加载上下文，LongMemEval基准领先）
 ├── multi-agent-orchestration/ # 🆕 多Agent编排框架（并行执行，worktree隔离）
-└── security-audit/    # 🆕 安全审计工作流（CodeQL/Semgrep，OWASP Top 10覆盖）
+├── security-audit/    # 🆕 安全审计工作流（CodeQL/Semgrep，OWASP Top 10覆盖）
+├── testing-patterns/  # 🆕 全栈测试模式（单元/React/E2E/Mock，测试金字塔）
+├── document-typography/ # 🆕 文档排版质量控制（孤行寡段/编号对齐/字体层级）
+├── claude-obsidian-reporter/ # 🆕 Obsidian报告生成（Git提交→日/周/月报）
+├── hads/              # 🆕 人-AI双读文档标准（Human-AI Document Standard）
+├── skill-quality-analyzer/ # 🆕 Skill质量评估元技能（五维评分体系）
+├── codebase-inventory-audit/ # 🆕 代码库清单审计（孤儿代码/重复逻辑/技术债务）
+├── agent-governance/  # 🆕 AI Agent治理框架（策略/信任/审计/威胁检测）
+└── dictionary-of-ai-coding/ # 🆕 AI编码术语词典（Skill/Prompt/Agent/Vibe Coding大白话）
 ```
 
 ---
@@ -101,9 +109,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（72个）
+## 🚀 已安装的 Skills（80个）
 
-### 🔧 开发方法论类（32个）
+### 🔧 开发方法论类（40个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -139,6 +147,14 @@ D:\xgq\work\skills-ai\
 | **supermemory** | 🆕 跨会话持久记忆：自动加载上下文，向量检索，LongMemEval基准领先 | SuperMemory | - |
 | **multi-agent-orchestration** | 🆕 多Agent编排：并行执行，worktree隔离，AI团队协作框架 | oh-my-claudecode | 26K+ |
 | **security-audit** | 🆕 安全审计：CodeQL/Semgrep集成，OWASP Top 10漏洞识别与修复 | trailofbits/skills | - |
+| **testing-patterns** | 🆕 全栈测试模式：单元/React组件/E2E/Mock，测试金字塔分层实践 | Anthropic PR #723 | - |
+| **document-typography** | 🆕 文档排版质量控制：孤行寡段/编号对齐/字体层级/间距规范 | Anthropic PR #514 | - |
+| **claude-obsidian-reporter** | 🆕 Obsidian报告生成：Git提交自动转日/周/月报，YAML Frontmatter | Anthropic PR #664 | - |
+| **hads** | 🆕 人-AI双读文档标准：Markdown语义标记，同时服务人类和AI解析 | Anthropic PR #616 | - |
+| **skill-quality-analyzer** | 🆕 Skill质量评估元技能：结构/文档/安全/可维护性/触发精度五维评分 | Anthropic PR #83 | - |
+| **codebase-inventory-audit** | 🆕 代码库清单审计：孤儿代码/重复逻辑/文档缺口/技术债务量化 | Anthropic Issue #147 | - |
+| **agent-governance** | 🆕 AI Agent治理框架：策略执行/信任评分/审计追踪/威胁检测 | Anthropic Issue #412 | - |
+| **dictionary-of-ai-coding** | 🆕 AI编码术语词典：Skill/Prompt/Agent/Vibe Coding大白话解释 | mattpocock | 1K+ |
 
 ### 💼 工作类（7个）
 
@@ -406,6 +422,14 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-09 | 🆕新增 | supermemory（跨会话持久记忆） | LongMemEval/LoCoMo基准领先 |
 | 2026-05-09 | 🆕新增 | multi-agent-orchestration（多Agent编排框架） | oh-my-claudecode（26K+⭐） |
 | 2026-05-09 | 🆕新增 | security-audit（安全审计工作流） | trailofbits/skills（CodeQL/Semgrep） |
+| 2026-05-11 | 🆕新增 | testing-patterns（全栈测试模式·测试金字塔） | Anthropic PR #723 |
+| 2026-05-11 | 🆕新增 | document-typography（文档排版质量控制） | Anthropic PR #514 |
+| 2026-05-11 | 🆕新增 | claude-obsidian-reporter（Obsidian报告生成·Git→笔记） | Anthropic PR #664 |
+| 2026-05-11 | 🆕新增 | hads（人-AI双读文档标准·HADS） | Anthropic PR #616 |
+| 2026-05-11 | 🆕新增 | skill-quality-analyzer（Skill质量评估元技能·五维评分） | Anthropic PR #83 |
+| 2026-05-11 | 🆕新增 | codebase-inventory-audit（代码库清单审计·技术债务） | Anthropic Issue #147 |
+| 2026-05-11 | 🆕新增 | agent-governance（AI Agent治理框架·策略/信任/审计） | Anthropic Issue #412 |
+| 2026-05-11 | 🆕新增 | dictionary-of-ai-coding（AI编码术语词典·大白话解释） | mattpocock（1K+⭐） |
 
 ---
 
