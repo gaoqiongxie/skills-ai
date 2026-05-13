@@ -267,11 +267,47 @@ D:\xgq\work\skills-ai\
 
 ---
 
+## 🌐 跨平台兼容性指南
+
+本仓库的 Skills 基于 **Anthropic SKILL.md 标准** 构建，原生支持 Claude Code / Claude WorkBuddy。其他 AI 工具可通过以下方式使用：
+
+| AI 工具 | 支持方式 | 使用方法 |
+|---------|---------|---------|
+| **Claude Code / WorkBuddy** | ✅ 原生支持 | 复制 Skill 文件夹到 `~/.claude/skills/` 或 `~/.workbuddy/skills/`，重启后自动识别 |
+| **Trae** | ⚡ 适配使用 | 打开 **Settings → Builder → System Prompt**，将 SKILL.md 内容粘贴为系统提示词 |
+| **Kimi** | ⚡ 适配使用 | 使用 **Kimi+ → 创建智能体**，将 SKILL.md 的 description 作为触发词，正文作为提示词模板 |
+| **Cursor** | ⚡ 适配使用 | 将 SKILL.md 内容添加到 `.cursorrules` 文件，或在 Composer 中作为 `@` 提示词引用 |
+| **VS Code + Cline** | ⚡ 适配使用 | 在 Cline 设置中配置 Custom System Prompt，粘贴 SKILL.md 内容 |
+| **VS Code + Continue** | ⚡ 适配使用 | 在 `~/.continue/config.json` 的 `systemMessage` 中配置 Skill 内容 |
+| **通用方法** | 📋 全平台适用 | 直接复制 SKILL.md 内容到对话开头作为上下文，AI 会按 Skill 定义的行为工作 |
+
+### 💡 跨平台使用技巧
+
+**技巧 1：直接粘贴法（所有平台通用）**
+```
+你现在是 [Skill名称]，请按照以下规范与我协作：
+
+[Paste SKILL.md 全文内容]
+
+现在请开始工作。
+```
+
+**技巧 2：Trae Builder 模式**
+在 Trae 的 Builder 面板中，点击右上角设置图标 → 编辑 System Prompt，将 Skill 内容粘贴进去。Builder 会自动在每次生成代码前加载该提示词。
+
+**技巧 3：Kimi 智能体**
+访问 [kimi.moonshot.cn](https://kimi.moonshot.cn) → 左侧「Kimi+」→ 「创建智能体」→ 填入名称和触发词（复制 SKILL.md 的 description）→ 在「提示词」区域粘贴 SKILL.md 正文。
+
+**技巧 4：Cursor Rules**
+在项目根目录创建 `.cursorrules` 文件，将常用 Skill 的内容写入。Cursor 的 AI 聊天和 Composer 会自动读取该文件作为上下文。
+
+---
+
 ## 📖 如何使用 Skills
 
 ### 方式一：直接对话触发（推荐）
 
-在WorkBuddy中直接描述你的需求，例如：
+在 WorkBuddy / Claude Code 中直接描述你的需求，例如：
 
 ```
 # 触发 anti-pua
@@ -329,12 +365,16 @@ description: "这个Skill做什么的，什么时候触发它"
 你的详细说明...
 ```
 
-### Step 4：安装Skill
+### Step 4：安装Skill（按平台选择）
 
-复制你的Skill文件夹到WorkBuddy的skills目录：
-
+**Claude Code / WorkBuddy（原生支持）：**
 ```
-# 路径
+# macOS / Linux
+~/.claude/skills/
+~/.workbuddy/skills/
+
+# Windows
+C:\Users\<你的用户名>\.claude\skills\
 C:\Users\<你的用户名>\.workbuddy\skills\
 
 # 或者在文件管理器中：
@@ -342,9 +382,21 @@ C:\Users\<你的用户名>\.workbuddy\skills\
 # 将你的skill文件夹粘贴进去
 ```
 
-### Step 5：重启WorkBuddy
+**Trae（适配使用）：**
+打开 Trae → Settings → Builder → System Prompt → 将 SKILL.md 内容粘贴进去
 
-重启后，新Skill会自动加载，可以搜索到了。
+**Kimi（适配使用）：**
+访问 [kimi.moonshot.cn](https://kimi.moonshot.cn) → Kimi+ → 创建智能体 → 粘贴 SKILL.md 内容作为提示词
+
+**Cursor（适配使用）：**
+在项目根目录创建 `.cursorrules` 文件，将 SKILL.md 内容写入
+
+### Step 5：重启 / 刷新
+
+- **Claude Code / WorkBuddy**：重启客户端后自动加载
+- **Trae**：切换 Builder 模式时自动生效
+- **Kimi**：创建后立即可用
+- **Cursor**：新建对话时自动读取 `.cursorrules`
 
 ---
 
@@ -464,16 +516,23 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 ## ❓ 常见问题
 
 **Q: Skill放在哪里？**
-A: `C:\Users\<用户名>\.workbuddy\skills\`
+A: 按平台选择：
+- **Claude Code / WorkBuddy**: `~/.claude/skills/` 或 `~/.workbuddy/skills/`
+- **Trae**: 通过 Settings → Builder → System Prompt 粘贴
+- **Kimi**: 通过 Kimi+ → 创建智能体 粘贴
+- **Cursor**: 项目根目录创建 `.cursorrules` 文件
+
+**Q: Trae / Kimi / Cursor 能用这些 Skill 吗？**
+A: 可以！本仓库所有 Skill 的知识内容是通用的。非 Claude 平台用户可将 SKILL.md 内容作为系统提示词（System Prompt）或上下文粘贴使用。详细方法见上方「跨平台兼容性指南」。
 
 **Q: 一个目录可以放多个Skill吗？**
 A: 不可以，每个Skill需要一个独立文件夹。
 
 **Q: Skill不生效怎么办？**
-A: 1) 确认SKILL.md格式正确 2) 重启WorkBuddy 3) 检查description是否包含触发关键词
+A: 1) 确认SKILL.md格式正确 2) 重启客户端 3) 检查description是否包含触发关键词
 
 **Q: 可以分享给其他人吗？**
-A: 可以，把Skill文件夹压缩分享，对方放到自己的skills目录即可。
+A: 可以，把Skill文件夹压缩分享，对方按对应平台方法安装即可。
 
 ---
 
