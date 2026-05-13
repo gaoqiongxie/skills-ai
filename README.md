@@ -55,12 +55,14 @@ D:\xgq\work\skills-ai\
 ├── feihua-ling/               # 🆕 飞花令（中国古典诗词文化）
 ├── bs-translator/             # 🆕 废话翻译官（听不懂人话急救包）
 ├── personality-test/          # 🆕 人格测试大全（MBTI/九型/DISC/星座/血型）
+├── relationship-patterns/     # 🆕 亲密关系模式识别（吊桥效应/PUA/煤气灯效应/吹狗哨等）
 ├── memory-system/            # 🆕 记忆系统（缓存/Session/消息队列）
 ├── memory-bank/             # 🆕 项目记忆系统（AGENTS/模板/ADR）
 ├── karpathy-skills/       # 🆕 LLM编程避坑指南（Karpathy最佳实践）
 ├── hermes-experience/     # 🆕 经验沉淀系统（Do it once, Automate forever）
 ├── cron-expression/      # 最强Cron表达式（生成/验证/多语言实现）
 ├── skill-accelerator/   # 技能加速器·滑翔伞学习法（六阶段通用方法论）
+├── ai-trend-radar/      # AI趋势雷达（追踪热门AI关键词、技术概念、行业动态）
 ├── api-doc-generator/   # API文档生成器（Swagger/OpenAPI注解）
 ├── git-commit/          # Git提交规范生成器（Conventional Commits）
 ├── browser-use/        # 浏览器自动化（Playwright网页操作）
@@ -76,7 +78,8 @@ D:\xgq\work\skills-ai\
 ├── prompt-driven-dev/ # 🆕 提示驱动开发（提示词版本化+确定性生成+Prompt as Code）
 ├── prd-to-demo/       # 🆕 PRD转可交互原型（根据需求文档生成HTML原型Demo）
 ├── screenshot-to-prototype/ # 🆕 截图转可交互原型（设计稿/草图自动生成HTML原型）
-├── skill-orchestrator/ # 🆕 Skill编排器（67个Skill的统一入口，智能匹配+工作流推荐）
+├── screenshot-to-prd/       # 🆕 截图转PRD（UI截图自动生成产品需求文档）
+├── skill-orchestrator/ # 🆕 Skill编排器（81个Skill的统一入口，智能匹配+工作流推荐）
 ├── caveman-skill/     # 🆕 洞穴人Token优化（削减75%token消耗，保持技术准确）
 ├── supermemory/       # 🆕 跨会话持久记忆（自动加载上下文，LongMemEval基准领先）
 ├── multi-agent-orchestration/ # 🆕 多Agent编排框架（并行执行，worktree隔离）
@@ -97,25 +100,45 @@ D:\xgq\work\skills-ai\
 
 | 来源项目 | Stars | 贡献的Skill理念 |
 |---------|-------|----------------|
-| **obra/superpowers** | ⭐ 142K | systematic-debugging, test-driven-development, brainstorming, writing-plans |
+| **obra/superpowers** | ⭐ 154.2K | systematic-debugging, test-driven-development, brainstorming, writing-plans |
 | **Anthropic官方Skills** | ⭐ 114K | docx, pdf, pptx, xlsx (官方文档处理) |
 | **skills.sh find-skills** | 418K安装 | skill-lookup (元技能理念) |
 | **Top 20 Claude Code** | 169.7K | confidence-check, create-pr (自动化理念) |
-| **forrestchang/andrej-karpathy-skills** | ⭐ **71.8K**（本周+44K🔥） | karpathy-skills (LLM编程避坑) |
+| **forrestchang/andrej-karpathy-skills** | ⭐ 42.8K | karpathy-skills (LLM编程避坑) |
+| **thedotmack/claude-mem** | ⭐ 57.8K | claude-mem (跨会话持久记忆) |
+| **virattt/ai-hedge-fund** | ⭐ 55K | ai-hedge-fund (AI对冲基金团队·多Agent协作) |
 | **alchaincyf/huashu-design** | ⭐ 2,839（本周新晋） | huashu-design (HTML原生设计) |
 | **lewislulu/html-ppt-skill** | ⭐ 1,754（本周新晋） | html-ppt-skill (HTML PPT生成) |
 | **cathrynlavery/diagram-design** | ⭐ 1,320（本周新晋） | diagram-design (编辑级图表) |
-| **thedotmack/claude-mem** | ⭐ 65K+（本周Trending #3，单周+12K🔥） | claude-mem (跨会话持久记忆) |
+| **Donchitos/Claude-Code-Game-Studios** | ⭐ 10.4K | 49个AI Agent + 72个Workflow Skill的游戏工作室 |
+| **lsdefine/GenericAgent** | ⭐ 1.9K | 自进化Agent，从3.3K行种子代码生长技能树 |
 
 ---
 
-## 🚀 已安装的 Skills（80个）
+## 🔥 2026 AI 编程热词速查
+
+| 热词 | 含义 | 对应Skill |
+|------|------|----------|
+| **BMAD** | Spec-first的Agentic Agile框架，21+ AI Agent协作 | `bmad-method` |
+| **AI-DLC** | AI驱动开发生命周期，四阶段闭环+质量门控 | `ai-dlc` |
+| **PDD** | Prompt-Driven Development，提示词版本化+确定性生成 | `prompt-driven-dev` |
+| **OpenSpec-SDD** | 规范驱动开发，Gherkin验收场景对齐需求 | `openspec-sdd` |
+| **Agentic AI** | 从聊天助手进化为自主执行工作流的Agent | `multi-agent-orchestration` |
+| **Context Engineering** | 比Prompt Engineering更高级的信息环境优化 | `bmad-method` |
+| **Vibe Coding** | 自然语言驱动开发，45%AI生成代码有安全漏洞 | 待补充 |
+| **MCP** | Model Context Protocol，AI工具集成标准 | 待补充 |
+| **Repository Intelligence** | AI理解整个代码库、提交历史、架构意图 | 待补充 |
+| **Skill供应链安全** | Snyk发现36%的skills存在恶意提示注入 | `security-audit` |
+
+---
+
+## 🚀 已安装的 Skills（81个）
 
 ### 🔧 开发方法论类（40个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
-| **skill-orchestrator** | ⭐ Skill编排器：67个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
+| **skill-orchestrator** | ⭐ Skill编排器：81个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
 | **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
 | **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
 | **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
@@ -137,12 +160,12 @@ D:\xgq\work\skills-ai\
 | **frontend-design** | 前端设计规范：拒绝AI slop，6大视觉方向（Brutalist/Editorial/Retro等） | Anthropic 官方 | 100K+ installs |
 | **skill-creator** | Skill创造者：元技能，创建/测试/优化Skills，含Eval框架 | Anthropic 官方 | 官方内置 |
 | **claude-mem** | 跨会话持久记忆：自动捕获/AI压缩/向量检索/渐进式披露 | thedotmack/claude-mem | 65K+ |
-| **weather-pro** | 专业气象分析师：多数据源/农业航空航海/趋势预测/灾害预警 | 自建 | - |
 | **bmad-method** | AI驱动敏捷开发：一人顶一团队，多角色协作，文档分片+上下文工程 | bmad-code-org | - |
 | **ai-dlc** | AI驱动开发生命周期：四阶段闭环+Hat-based角色+Backpressure质量门控 | TheBushidoCollective | - |
 | **prompt-driven-dev** | 提示驱动开发：提示词版本化+确定性生成+Prompt as Code | 社区实践 | - |
 | **prd-to-demo** | PRD转可交互原型：根据需求文档自动生成HTML原型Demo | 自建 | - |
 | **screenshot-to-prototype** | 截图转可交互原型：设计稿/草图/竞品截图自动还原为HTML原型 | 自建 | - |
+| **screenshot-to-prd** | 截图转PRD：UI截图自动生成结构化产品需求文档 | 自建 | - |
 | **caveman-skill** | 🆕 洞穴人Token优化：削减75%输出token，压缩记忆文件46%，GitHub viral | juliusbrussee/caveman | viral |
 | **supermemory** | 🆕 跨会话持久记忆：自动加载上下文，向量检索，LongMemEval基准领先 | SuperMemory | - |
 | **multi-agent-orchestration** | 🆕 多Agent编排：并行执行，worktree隔离，AI团队协作框架 | oh-my-claudecode | 26K+ |
@@ -193,6 +216,7 @@ D:\xgq\work\skills-ai\
 | **knowledge-card** | 把知识整理成记忆卡片 | "知识卡片"、"帮我背书" |
 | **study-buddy** | 陪孩子背课文/听写/口算 | "陪孩子学习"、"听写" |
 | **jargon-translator** | 专业术语翻译成大白话 | "术语翻译"、"听不懂" |
+| **ai-trend-radar** | AI趋势雷达：追踪最热AI关键词、技术概念和行业动态 | "AI趋势"、"最近AI有什么新东西"、"AI热词" |
 
 ### 🎮 传统文化游戏类（2个）🆕
 
@@ -212,17 +236,18 @@ D:\xgq\work\skills-ai\
 | **horoscope** | 星座运势+趣味抽签 | "星座"、"抽签"、"运势" |
 | **emoji-translator** | emoji解读+翻译 | "emoji翻译"、"这个表情什么意思" |
 
-### 🧠 思考类（5个）
+### 🧠 思考类（6个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
 | **rural-story-writer** | 乡土叙事小说生成器，写祖孙故事 | "写乡土小说"、"奶奶的故事" |
+| **relationship-patterns** | 亲密关系模式识别：辨别PUA/煤气灯效应/吹狗哨等不健康关系 | "关系模式"、"是不是PUA"、"煤气灯效应" |
 | **choice-helper** | 纠结选A还是B？帮你分析 | "选择困难"、"帮我选" |
 | **venting-hole** | 吐槽树洞，陪你发泄 | "吐槽"、"气死了"、"心情不好" |
 | **sleep-story** | 睡前故事，陪你入睡 | "睡前故事"、"睡不着" |
 | **year-summary** | 年度总结生成器 | "年终总结"、"年度复盘" |
 
-### 🏠 居家类（4个）
+### 🏠 居家类（5个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -417,7 +442,10 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-04-29 | 🆕新增 | prompt-driven-dev（提示驱动开发） | 社区实践（提示词版本化+确定性生成） |
 | 2026-04-29 | 🆕新增 | prd-to-demo（PRD转可交互原型） | 自建（根据PRD生成HTML原型Demo） |
 | 2026-04-29 | 🆕新增 | screenshot-to-prototype（截图转可交互原型） | 自建（设计稿/草图自动还原HTML原型） |
-| 2026-04-29 | 🆕新增 | skill-orchestrator（Skill编排器·统一入口） | 自建（67个Skill智能匹配+标准工作流推荐） |
+| 2026-04-27 | 🆕新增 | ai-trend-radar（AI趋势雷达·追踪热词） | 自建（AI关键词/技术概念/行业动态追踪） |
+| 2026-04-27 | 🆕新增 | relationship-patterns（亲密关系模式识别） | 自建（辨别PUA/煤气灯效应/吹狗哨等） |
+| 2026-04-27 | 🆕新增 | screenshot-to-prd（截图转PRD） | 自建（UI截图自动生成产品需求文档） |
+| 2026-04-29 | 🆕新增 | skill-orchestrator（Skill编排器·统一入口） | 自建（81个Skill智能匹配+标准工作流推荐） |
 | 2026-05-09 | 🆕新增 | caveman-skill（洞穴人Token优化·GitHub viral） | juliusbrussee/caveman（削减75%token） |
 | 2026-05-09 | 🆕新增 | supermemory（跨会话持久记忆） | LongMemEval/LoCoMo基准领先 |
 | 2026-05-09 | 🆕新增 | multi-agent-orchestration（多Agent编排框架） | oh-my-claudecode（26K+⭐） |
