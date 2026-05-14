@@ -91,7 +91,11 @@ D:\xgq\work\skills-ai\
 ├── skill-quality-analyzer/ # 🆕 Skill质量评估元技能（五维评分体系）
 ├── codebase-inventory-audit/ # 🆕 代码库清单审计（孤儿代码/重复逻辑/技术债务）
 ├── agent-governance/  # 🆕 AI Agent治理框架（策略/信任/审计/威胁检测）
-└── dictionary-of-ai-coding/ # 🆕 AI编码术语词典（Skill/Prompt/Agent/Vibe Coding大白话）
+├── dictionary-of-ai-coding/ # 🆕 AI编码术语词典（Skill/Prompt/Agent/Vibe Coding大白话）
+├── stop-slop/         # 🆕 去除AI味（识别并清除AI填充语/套话/slop模式，输出评分1-10）
+├── opinionated-engineer/ # 🆕 工程化脚手架（强制TDD/类型安全/错误处理，禁止TODO，生产级标准）
+├── beads-memory/      # 🆕 编码Agent记忆升级（跨会话持久化代码库上下文，AI压缩，6倍token节省）
+└── webapp-testing/    # 🆕 Web应用自动化测试（Playwright侦察→行动，E2E/表单/截图对比/性能）
 ```
 
 ---
@@ -132,13 +136,13 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（81个）
+## 🚀 已安装的 Skills（85个）
 
-### 🔧 开发方法论类（40个）
+### 🔧 开发方法论类（44个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
-| **skill-orchestrator** | ⭐ Skill编排器：81个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
+| **skill-orchestrator** | ⭐ Skill编排器：85个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
 | **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
 | **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
 | **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
@@ -178,6 +182,9 @@ D:\xgq\work\skills-ai\
 | **codebase-inventory-audit** | 🆕 代码库清单审计：孤儿代码/重复逻辑/文档缺口/技术债务量化 | Anthropic Issue #147 | - |
 | **agent-governance** | 🆕 AI Agent治理框架：策略执行/信任评分/审计追踪/威胁检测 | Anthropic Issue #412 | - |
 | **dictionary-of-ai-coding** | 🆕 AI编码术语词典：Skill/Prompt/Agent/Vibe Coding大白话解释 | mattpocock | 1K+ |
+| **opinionated-engineer** | 🆕 工程化脚手架：强制TDD/类型安全/错误处理/日志规范，禁止TODO | mattpocock/skills | 75K |
+| **beads-memory** | 🆕 编码Agent记忆升级：跨会话持久化代码库上下文，AI压缩，6倍token节省 | gastownhall/beads | 22.1K |
+| **webapp-testing** | 🆕 Web应用自动化测试：Playwright侦察→行动，E2E/表单/截图对比/性能 | 社区实践 | - |
 
 ### 💼 工作类（7个）
 
@@ -225,7 +232,7 @@ D:\xgq\work\skills-ai\
 | **idiom-chain** | 经典成语接龙，考验成语储备 | 原创 | "成语接龙"、"接龙"、"玩接龙" |
 | **feihua-ling** | 古诗词飞花令，诗词大会玩法 | 原创 | "飞花令"、"诗词接龙"、"对诗" |
 
-### 💡 创意类（6个）
+### 💡 创意类（7个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -235,6 +242,7 @@ D:\xgq\work\skills-ai\
 | **epitaph-generator** | 墓志铭/人生意义思考 | "墓志铭"、"人生感悟" |
 | **horoscope** | 星座运势+趣味抽签 | "星座"、"抽签"、"运势" |
 | **emoji-translator** | emoji解读+翻译 | "emoji翻译"、"这个表情什么意思" |
+| **stop-slop** | 去除AI味：识别并清除AI填充语/套话/slop模式，输出评分1-10 | "去掉AI味"、"太像AI写的了"、"去slop"、"像人写的" |
 
 ### 🧠 思考类（6个）
 
@@ -510,6 +518,10 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-11 | 🆕新增 | codebase-inventory-audit（代码库清单审计·技术债务） | Anthropic Issue #147 |
 | 2026-05-11 | 🆕新增 | agent-governance（AI Agent治理框架·策略/信任/审计） | Anthropic Issue #412 |
 | 2026-05-11 | 🆕新增 | dictionary-of-ai-coding（AI编码术语词典·大白话解释） | mattpocock（1K+⭐） |
+| 2026-05-14 | 🆕新增 | stop-slop（去除AI味·识别并清除AI slop模式） | 社区热门（Anthropic Marketplace viral） |
+| 2026-05-14 | 🆕新增 | opinionated-engineer（工程化脚手架·强制TDD/生产级标准） | mattpocock/skills ⭐75K（Trending #1） |
+| 2026-05-14 | 🆕新增 | beads-memory（编码Agent记忆升级·跨会话代码库上下文） | gastownhall/beads ⭐22.1K |
+| 2026-05-14 | 🆕新增 | webapp-testing（Web应用自动化测试·Playwright侦察→行动） | 社区实践 |
 
 ---
 
