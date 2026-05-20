@@ -100,7 +100,8 @@ D:\xgq\work\skills-ai\
 ├── dev-flow/          # 🔥 智能开发工作流（自动感知6阶段，方法论自动编排）
 ├── quality-gate/      # 🔥 代码质量门控（提交前5维检查，不通过不放行）
 ├── create-pr/         # 🆕 自动生成规范PR（分析git diff，输出标题/摘要/测试计划/影响范围）
-└── frontend-code-review/ # 🆕 前端代码结构化审查（React/TS/TSX，性能/可访问性/类型安全）
+├── frontend-code-review/ # 🆕 前端代码结构化审查（React/TS/TSX，性能/可访问性/类型安全）
+└── cardiac-arrest-guide/ # 🆕 心脏骤停科普与急救指南（起因/预后/CPR/AED/个人风险评估）
 ```
 
 ---
@@ -141,7 +142,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（90个）
+## 🚀 已安装的 Skills（91个）
 
 ### 🔧 开发方法论类（49个）
 
@@ -225,7 +226,7 @@ D:\xgq\work\skills-ai\
 | **travel-planner** | 国内游全能规划：行程/住宿/美食/预算/交通/打包清单 | "旅行计划"、"旅游攻略"、"出行规划"、"帮我规划行程" |
 | **weather-pro** | 专业气象分析：农业/航空/航海/灾害预警/气候趋势 | "分析天气"、"气象数据"、"农业气象"、"飞行气象"、"台风分析" |
 
-### 📚 学习类（4个）
+### 📚 学习类（5个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -234,6 +235,12 @@ D:\xgq\work\skills-ai\
 | **study-buddy** | 陪孩子背课文/听写/口算 | "陪孩子学习"、"听写" |
 | **jargon-translator** | 专业术语翻译成大白话 | "术语翻译"、"听不懂" |
 | **ai-trend-radar** | AI趋势雷达：追踪最热AI关键词、技术概念和行业动态 | "AI趋势"、"最近AI有什么新东西"、"AI热词" |
+
+### 🏥 健康科普类（1个）🆕
+
+| Skill名称 | 功能 | 触发关键词 |
+|----------|------|-----------|
+| **cardiac-arrest-guide** | 心脏骤停科普与急救指南：起因/预后/CPR/AED/个人风险评估 | "心脏骤停"、"心肺复苏"、"猝死风险"、"AED怎么用"、"心脏骤停原因" |
 
 ### 🎮 传统文化游戏类（2个）🆕
 
@@ -537,6 +544,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-15 | 🔥蒸馏 | quality-gate（代码质量门控·提交前五维检查，6合1） | 蒸馏：testing-patterns+webapp-testing+TDD+security-audit+confidence-check+opinionated-engineer |
 | 2026-05-20 | 🆕新增 | create-pr（自动生成规范PR·分析git diff，169.7K流行度） | 社区热门（Anthropic Marketplace 2026最流行） |
 | 2026-05-20 | 🆕新增 | frontend-code-review（前端代码结构化审查·React/TS/TSX） | 社区热门（Effeilo/claude-code-frontend-skills） |
+| 2026-05-20 | 🆕新增 | cardiac-arrest-guide（心脏骤停科普与急救指南·起因/预后/CPR/AED） | 自建（整合AHA/ERC指南、中国心肺复苏指南） |
 
 ---
 
