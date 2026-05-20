@@ -98,7 +98,9 @@ D:\xgq\work\skills-ai\
 ├── webapp-testing/    # 🆕 Web应用自动化测试（Playwright侦察→行动，E2E/表单/截图对比/性能）
 ├── memory-hub/        # 🔥 统一记忆中枢（自动路由6层记忆，告别记忆Skill选择困难）
 ├── dev-flow/          # 🔥 智能开发工作流（自动感知6阶段，方法论自动编排）
-└── quality-gate/      # 🔥 代码质量门控（提交前5维检查，不通过不放行）
+├── quality-gate/      # 🔥 代码质量门控（提交前5维检查，不通过不放行）
+├── create-pr/         # 🆕 自动生成规范PR（分析git diff，输出标题/摘要/测试计划/影响范围）
+└── frontend-code-review/ # 🆕 前端代码结构化审查（React/TS/TSX，性能/可访问性/类型安全）
 ```
 
 ---
@@ -139,13 +141,13 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（88个）
+## 🚀 已安装的 Skills（90个）
 
-### 🔧 开发方法论类（47个）
+### 🔧 开发方法论类（49个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
-| **skill-orchestrator** | ⭐ Skill编排器：88个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
+| **skill-orchestrator** | ⭐ Skill编排器：90个Skill的统一智能入口，场景匹配+工作流推荐 | 自建 | - |
 | **skill-lookup** | Skills发现与安装助手 | skills.sh | 418K安装 |
 | **systematic-debugging** | 系统化调试方法论，4阶段根因分析 | obra/superpowers | 142K |
 | **test-driven-development** | TDD测试驱动开发，红-绿-重构循环 | obra/superpowers | 142K |
@@ -191,6 +193,8 @@ D:\xgq\work\skills-ai\
 | **memory-hub** | 🔥 统一记忆中枢：自动路由四层记忆（个人/项目/知识/经验），告别选择困难 | 蒸馏（6合1） | - |
 | **dev-flow** | 🔥 智能开发工作流：自动感知六阶段，方法论自动编排（OpenSpec→BMAD→PDD→OE→AI-DLC） | 蒸馏（5合1） | - |
 | **quality-gate** | 🔥 代码质量门控：提交前五维检查（测试/安全/规范/逻辑/性能），不通过不放行 | 蒸馏（6合1） | - |
+| **create-pr** | 🆕 自动生成规范PR：分析git diff，输出标题/摘要/测试计划/影响范围/标签 | 社区热门（169.7K） | - |
+| **frontend-code-review** | 🆕 前端代码结构化审查：React/TS/TSX性能/可维护性/可访问性/类型安全检查 | 社区热门 | - |
 
 ### 💼 工作类（7个）
 
@@ -531,6 +535,8 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-15 | 🔥蒸馏 | memory-hub（统一记忆中枢·自动路由四层记忆，6合1） | 蒸馏：claude-mem+supermemory+beads-memory+memory-bank+memory-system+hermes-experience |
 | 2026-05-15 | 🔥蒸馏 | dev-flow（智能开发工作流·自动感知六阶段，5合1） | 蒸馏：bmad-method+ai-dlc+opinionated-engineer+prompt-driven-dev+openspec-sdd |
 | 2026-05-15 | 🔥蒸馏 | quality-gate（代码质量门控·提交前五维检查，6合1） | 蒸馏：testing-patterns+webapp-testing+TDD+security-audit+confidence-check+opinionated-engineer |
+| 2026-05-20 | 🆕新增 | create-pr（自动生成规范PR·分析git diff，169.7K流行度） | 社区热门（Anthropic Marketplace 2026最流行） |
+| 2026-05-20 | 🆕新增 | frontend-code-review（前端代码结构化审查·React/TS/TSX） | 社区热门（Effeilo/claude-code-frontend-skills） |
 
 ---
 
