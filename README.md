@@ -102,7 +102,8 @@ D:\xgq\work\skills-ai\
 ├── create-pr/         # 🆕 自动生成规范PR（分析git diff，输出标题/摘要/测试计划/影响范围）
 ├── frontend-code-review/ # 🆕 前端代码结构化审查（React/TS/TSX，性能/可访问性/类型安全）
 ├── cardiac-arrest-guide/ # 🆕 心脏骤停科普与急救指南（起因/预后/CPR/AED/个人风险评估）
-└── music-recommender/    # 🆕 音乐推荐与歌单生成（情绪/场景/天气/流派多维度匹配）
+├── music-recommender/    # 🆕 音乐推荐与歌单生成（情绪/场景/天气/流派多维度匹配）
+└── backend-change-flow/  # 🆕 后端需求驱动变更工作流（读代码→析需求→对齐→编码→Review→一致性确认）
 ```
 
 ---
@@ -143,9 +144,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（92个）
+## 🚀 已安装的 Skills（93个）
 
-### 🔧 开发方法论类（49个）
+### 🔧 开发方法论类（50个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -197,6 +198,7 @@ D:\xgq\work\skills-ai\
 | **quality-gate** | 🔥 代码质量门控：提交前五维检查（测试/安全/规范/逻辑/性能），不通过不放行 | 蒸馏（6合1） | - |
 | **create-pr** | 🆕 自动生成规范PR：分析git diff，输出标题/摘要/测试计划/影响范围/标签 | 社区热门（169.7K） | - |
 | **frontend-code-review** | 🆕 前端代码结构化审查：React/TS/TSX性能/可维护性/可访问性/类型安全检查 | 社区热门 | - |
+| **backend-change-flow** | 🆕 后端需求驱动变更工作流：读代码→析需求→影响分析→三对齐→编码→循环Review→一致性确认 | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -547,6 +549,8 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-20 | 🆕新增 | create-pr（自动生成规范PR·分析git diff，169.7K流行度） | 社区热门（Anthropic Marketplace 2026最流行） |
 | 2026-05-20 | 🆕新增 | frontend-code-review（前端代码结构化审查·React/TS/TSX） | 社区热门（Effeilo/claude-code-frontend-skills） |
 | 2026-05-20 | 🆕新增 | cardiac-arrest-guide（心脏骤停科普与急救指南·起因/预后/CPR/AED） | 自建（整合AHA/ERC指南、中国心肺复苏指南） |
+| 2026-05-22 | 🆕新增 | music-recommender（音乐推荐与歌单生成·情绪/场景/天气/流派多维度匹配） | 自建 |
+| 2026-05-25 | 🆕新增 | backend-change-flow（后端需求驱动变更工作流·七阶段闭环/三一致校验） | 自建（蒸馏 dev-flow + systematic-debugging + quality-gate 后端变更场景） |
 
 ---
 
