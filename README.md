@@ -105,7 +105,8 @@ D:\xgq\work\skills-ai\
 ├── music-recommender/    # 🆕 音乐推荐与歌单生成（情绪/场景/天气/流派多维度匹配）
 ├── backend-change-flow/  # 🆕 后端需求驱动变更工作流（读代码→析需求→对齐→编码→Review→一致性确认）
 ├── ai-collaboration-safety/ # 🆕 AI协作安全指南（防幻觉/防逼疯/原子输出/熔断机制）
-└── solo-parallel-dev/     # 🆕 单人多分支并行开发（worktree隔离/分支看板/冲突预防/上下文恢复）
+├── solo-parallel-dev/     # 🆕 单人多分支并行开发（worktree隔离/分支看板/冲突预防/上下文恢复）
+└── qiaopi-style/          # 🆕 侨批体书信生成（闽南番客家书/半文半白/见字如面/侨批文化）
 ```
 
 ---
@@ -146,7 +147,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（95个）
+## 🚀 已安装的 Skills（96个）
 
 ### 🔧 开发方法论类（52个）
 
@@ -257,7 +258,7 @@ D:\xgq\work\skills-ai\
 | **idiom-chain** | 经典成语接龙，考验成语储备 | 原创 | "成语接龙"、"接龙"、"玩接龙" |
 | **feihua-ling** | 古诗词飞花令，诗词大会玩法 | 原创 | "飞花令"、"诗词接龙"、"对诗" |
 
-### 💡 创意类（7个）
+### 💡 创意类（8个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -268,6 +269,7 @@ D:\xgq\work\skills-ai\
 | **horoscope** | 星座运势+趣味抽签 | "星座"、"抽签"、"运势" |
 | **emoji-translator** | emoji解读+翻译 | "emoji翻译"、"这个表情什么意思" |
 | **stop-slop** | 去除AI味：识别并清除AI填充语/套话/slop模式，输出评分1-10 | "去掉AI味"、"太像AI写的了"、"去slop"、"像人写的" |
+| **qiaopi-style** | 🆕 侨批体书信生成：闽南番客家书风格，半文半白，见字如面 | "转成侨批体"、"番客写信"、"给阿嬷写封信"、"唐山来批"、"侨批" |
 
 ### 🧠 思考类（6个）
 
@@ -557,6 +559,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-25 | 🆕新增 | backend-change-flow（后端需求驱动变更工作流·七阶段闭环/三一致校验） | 自建（蒸馏 dev-flow + systematic-debugging + quality-gate 后端变更场景） |
 | 2026-05-25 | 🆕新增 | ai-collaboration-safety（AI协作安全指南·防幻觉/防逼疯/原子输出/熔断机制） | 自建（基于人机交互心理学 + 开发者真实崩溃案例） |
 | 2026-05-25 | 🆕新增 | solo-parallel-dev（单人多分支并行开发·worktree隔离/分支看板/冲突预防） | 自建（基于 skills-ai 94个skill实战经验） |
+| 2026-05-27 | 🆕新增 | qiaopi-style（侨批体书信生成·闽南番客家书/半文半白/见字如面/侨批文化） | 自建（参考闽南/潮汕侨批文化、电影《给阿嬷的情书》风格） |
 
 ---
 
