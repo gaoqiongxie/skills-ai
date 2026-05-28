@@ -106,7 +106,8 @@ D:\xgq\work\skills-ai\
 ├── backend-change-flow/  # 🆕 后端需求驱动变更工作流（读代码→析需求→对齐→编码→Review→一致性确认）
 ├── ai-collaboration-safety/ # 🆕 AI协作安全指南（防幻觉/防逼疯/原子输出/熔断机制）
 ├── solo-parallel-dev/     # 🆕 单人多分支并行开发（worktree隔离/分支看板/冲突预防/上下文恢复）
-└── qiaopi-style/          # 🆕 侨批体书信生成（闽南番客家书/半文半白/见字如面/侨批文化）
+├── qiaopi-style/          # 🆕 侨批体书信生成（闽南番客家书/半文半白/见字如面/侨批文化）
+└── mental-health-check/   # 🆕 专业心理健康自评（PHQ-9/GAD-7/PSS-10/MBI职业倦怠）
 ```
 
 ---
@@ -147,7 +148,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（96个）
+## 🚀 已安装的 Skills（97个）
 
 ### 🔧 开发方法论类（52个）
 
@@ -245,11 +246,12 @@ D:\xgq\work\skills-ai\
 | **jargon-translator** | 专业术语翻译成大白话 | "术语翻译"、"听不懂" |
 | **ai-trend-radar** | AI趋势雷达：追踪最热AI关键词、技术概念和行业动态 | "AI趋势"、"最近AI有什么新东西"、"AI热词" |
 
-### 🏥 健康科普类（1个）🆕
+### 🏥 健康科普类（2个）🆕
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
 | **cardiac-arrest-guide** | 心脏骤停科普与急救指南：起因/预后/CPR/AED/个人风险评估 | "心脏骤停"、"心肺复苏"、"猝死风险"、"AED怎么用"、"心脏骤停原因" |
+| **mental-health-check** | 🆕 专业心理健康自评：PHQ-9抑郁/GAD-7焦虑/PSS-10压力/MBI职业倦怠 | "我觉得抑郁了"、"焦虑测试"、"压力好大"、"心理测试"、"最近情绪很低落"、"burnout" |
 
 ### 🎮 传统文化游戏类（2个）🆕
 
@@ -560,6 +562,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-25 | 🆕新增 | ai-collaboration-safety（AI协作安全指南·防幻觉/防逼疯/原子输出/熔断机制） | 自建（基于人机交互心理学 + 开发者真实崩溃案例） |
 | 2026-05-25 | 🆕新增 | solo-parallel-dev（单人多分支并行开发·worktree隔离/分支看板/冲突预防） | 自建（基于 skills-ai 94个skill实战经验） |
 | 2026-05-27 | 🆕新增 | qiaopi-style（侨批体书信生成·闽南番客家书/半文半白/见字如面/侨批文化） | 自建（参考闽南/潮汕侨批文化、电影《给阿嬷的情书》风格） |
+| 2026-05-28 | 🆕新增 | mental-health-check（专业心理健康自评·PHQ-9/GAD-7/PSS-10/MBI职业倦怠） | 自建（整合PHQ-9/GAD-7/PSS-10/MBI-GS标准化临床量表） |
 
 ---
 
