@@ -107,7 +107,8 @@ D:\xgq\work\skills-ai\
 ├── ai-collaboration-safety/ # 🆕 AI协作安全指南（防幻觉/防逼疯/原子输出/熔断机制）
 ├── solo-parallel-dev/     # 🆕 单人多分支并行开发（worktree隔离/分支看板/冲突预防/上下文恢复）
 ├── qiaopi-style/          # 🆕 侨批体书信生成（闽南番客家书/半文半白/见字如面/侨批文化）
-└── mental-health-check/   # 🆕 专业心理健康自评（PHQ-9/GAD-7/PSS-10/MBI职业倦怠）
+├── mental-health-check/   # 🆕 专业心理健康自评（PHQ-9/GAD-7/PSS-10/MBI职业倦怠）
+└── dev-toolkit-integrator/ # 🆕 禅道·Jira·Wiki三工具集成（需求流转/Bug跟踪/迭代规划/发布版本）
 ```
 
 ---
@@ -148,9 +149,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（97个）
+## 🚀 已安装的 Skills（98个）
 
-### 🔧 开发方法论类（52个）
+### 🔧 开发方法论类（53个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -205,6 +206,7 @@ D:\xgq\work\skills-ai\
 | **backend-change-flow** | 🆕 后端需求驱动变更工作流：读代码→析需求→影响分析→三对齐→编码→循环Review→一致性确认 | 自建 | - |
 | **ai-collaboration-safety** | 🆕 AI协作安全指南：防幻觉/防逼疯/原子输出/熔断机制/四层防御体系 | 自建 | - |
 | **solo-parallel-dev** | 🆕 单人多分支并行开发：worktree物理隔离/分支状态看板/冲突预防/上下文恢复协议 | 自建 | - |
+| **dev-toolkit-integrator** | 🆕 禅道·Jira·Wiki三工具集成：需求流转/Bug跟踪/迭代规划/发布版本/跨工具同步 | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -563,6 +565,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-25 | 🆕新增 | solo-parallel-dev（单人多分支并行开发·worktree隔离/分支看板/冲突预防） | 自建（基于 skills-ai 94个skill实战经验） |
 | 2026-05-27 | 🆕新增 | qiaopi-style（侨批体书信生成·闽南番客家书/半文半白/见字如面/侨批文化） | 自建（参考闽南/潮汕侨批文化、电影《给阿嬷的情书》风格） |
 | 2026-05-28 | 🆕新增 | mental-health-check（专业心理健康自评·PHQ-9/GAD-7/PSS-10/MBI职业倦怠） | 自建（整合PHQ-9/GAD-7/PSS-10/MBI-GS标准化临床量表） |
+| 2026-05-28 | 🆕新增 | dev-toolkit-integrator（禅道·Jira·Wiki三工具集成·需求流转/Bug跟踪/迭代规划/发布版本） | 自建（基于国内开发团队禅道+Jira+Wiki真实工作流） |
 
 ---
 
