@@ -109,6 +109,10 @@ D:\xgq\work\skills-ai\
 ├── qiaopi-style/          # 🆕 侨批体书信生成（闽南番客家书/半文半白/见字如面/侨批文化）
 ├── mental-health-check/   # 🆕 专业心理健康自评（PHQ-9/GAD-7/PSS-10/MBI职业倦怠）
 └── dev-toolkit-integrator/ # 🆕 禅道·Jira·Wiki三工具集成（需求流转/Bug跟踪/迭代规划/发布版本）
+├── web-artifacts-builder/  # 🆕 复杂Web构件构建器（React+Tailwind+shadcn/ui多组件/状态管理/路由）
+├── remotion-video/         # 🆕 Remotion React视频生成器（Composition/Sequence/逐帧渲染/FFmpeg导出）
+├── algorithmic-art/        # 🆕 算法艺术生成器（p5.js/Canvas/粒子系统/噪声纹理/种子可控复现）
+└── cloudflare-worker/      # 🆕 Cloudflare Worker边缘函数（Wrangler/TypeScript/KV/R2/D1/全球边缘节点）
 ```
 
 ---
@@ -149,9 +153,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（98个）
+## 🚀 已安装的 Skills（102个）
 
-### 🔧 开发方法论类（53个）
+### 🔧 开发方法论类（54个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -207,6 +211,7 @@ D:\xgq\work\skills-ai\
 | **ai-collaboration-safety** | 🆕 AI协作安全指南：防幻觉/防逼疯/原子输出/熔断机制/四层防御体系 | 自建 | - |
 | **solo-parallel-dev** | 🆕 单人多分支并行开发：worktree物理隔离/分支状态看板/冲突预防/上下文恢复协议 | 自建 | - |
 | **dev-toolkit-integrator** | 🆕 禅道·Jira·Wiki三工具集成：需求流转/Bug跟踪/迭代规划/发布版本/跨工具同步 | 自建 | - |
+| **cloudflare-worker** | 🆕 Cloudflare Worker边缘函数：Wrangler CLI/TypeScript/KV/R2/D1/全球300+边缘节点 | Anthropic官方+社区 | 114K |
 
 ### 💼 工作类（7个）
 
@@ -262,7 +267,7 @@ D:\xgq\work\skills-ai\
 | **idiom-chain** | 经典成语接龙，考验成语储备 | 原创 | "成语接龙"、"接龙"、"玩接龙" |
 | **feihua-ling** | 古诗词飞花令，诗词大会玩法 | 原创 | "飞花令"、"诗词接龙"、"对诗" |
 
-### 💡 创意类（8个）
+### 💡 创意类（10个）
 
 | Skill名称 | 功能 | 触发关键词 |
 |----------|------|-----------|
@@ -274,6 +279,8 @@ D:\xgq\work\skills-ai\
 | **emoji-translator** | emoji解读+翻译 | "emoji翻译"、"这个表情什么意思" |
 | **stop-slop** | 去除AI味：识别并清除AI填充语/套话/slop模式，输出评分1-10 | "去掉AI味"、"太像AI写的了"、"去slop"、"像人写的" |
 | **qiaopi-style** | 🆕 侨批体书信生成：闽南番客家书风格，半文半白，见字如面 | "转成侨批体"、"番客写信"、"给阿嬷写封信"、"唐山来批"、"侨批" |
+| **remotion-video** | 🆕 Remotion React视频生成器：组件化视频/逐帧渲染/时间轴控制/FFmpeg导出 | "生成视频"、"做动画视频"、"React视频"、"数据动画"、"字幕视频" |
+| **algorithmic-art** | 🆕 算法艺术生成器：p5.js/Canvas/粒子系统/噪声纹理/种子可控复现 | "生成艺术"、"算法壁纸"、"p5.js艺术"、"代码画画"、"粒子效果"、"噪声纹理" |
 
 ### 🧠 思考类（6个）
 
@@ -296,13 +303,14 @@ D:\xgq\work\skills-ai\
 | **plant-care** | 绿植养护指南 | "绿植养护"、"植物怎么养" |
 | **home-storage** | 家居收纳指南 | "收纳"、"整理房间" |
 
-### 🎨 设计类（3个）🆕
+### 🎨 设计类（4个）🆕
 
 | Skill名称 | 功能 | 来源 | 触发关键词 |
 |----------|------|------|-----------|
 | **html-ppt-skill** | HTML PPT生成，36主题/31布局/47动画，无需PowerPoint | lewislulu/html-ppt-skill ⭐1.7K | "做PPT"、"生成演示文稿"、"做汇报材料"、"做幻灯片" |
 | **diagram-design** | 编辑级图表设计，13种图表类型，纯HTML+SVG，拒绝Mermaid | cathrynlavery/diagram-design ⭐1.3K | "画架构图"、"画流程图"、"生成图表"、"做一张图" |
 | **huashu-design** | 花叔HTML原生设计，20种设计哲学/5维评审/品牌识别 | alchaincyf/huashu-design ⭐2.8K | "做网页"、"设计界面"、"做落地页"、"做活动页" |
+| **web-artifacts-builder** | 🆕 复杂Web构件构建器：React+Tailwind+shadcn/ui多组件/状态管理/路由切换 | Anthropic官方 ⭐114K | "做个复杂网页"、"数据看板"、"交互式配置页面"、"React组件页面"、"shadcn界面" |
 
 ---
 
@@ -566,6 +574,10 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-27 | 🆕新增 | qiaopi-style（侨批体书信生成·闽南番客家书/半文半白/见字如面/侨批文化） | 自建（参考闽南/潮汕侨批文化、电影《给阿嬷的情书》风格） |
 | 2026-05-28 | 🆕新增 | mental-health-check（专业心理健康自评·PHQ-9/GAD-7/PSS-10/MBI职业倦怠） | 自建（整合PHQ-9/GAD-7/PSS-10/MBI-GS标准化临床量表） |
 | 2026-05-28 | 🆕新增 | dev-toolkit-integrator（禅道·Jira·Wiki三工具集成·需求流转/Bug跟踪/迭代规划/发布版本） | 自建（基于国内开发团队禅道+Jira+Wiki真实工作流） |
+| 2026-05-29 | 🆕新增 | web-artifacts-builder（复杂Web构件构建器·React+Tailwind+shadcn/ui） | Anthropic官方 ⭐114K |
+| 2026-05-29 | 🆕新增 | remotion-video（Remotion React视频生成器·组件化视频/逐帧渲染/FFmpeg导出） | Remotion官方 |
+| 2026-05-29 | 🆕新增 | algorithmic-art（算法艺术生成器·p5.js/Canvas/粒子系统/噪声纹理/种子可控） | Anthropic官方 ⭐114K |
+| 2026-05-29 | 🆕新增 | cloudflare-worker（Cloudflare Worker边缘函数·Wrangler/TypeScript/KV/R2/D1） | Cloudflare官方+社区最佳实践 |
 
 ---
 
