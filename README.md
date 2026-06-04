@@ -114,7 +114,8 @@ D:\xgq\work\skills-ai\
 ├── algorithmic-art/        # 🆕 算法艺术生成器（p5.js/Canvas/粒子系统/噪声纹理/种子可控复现）
 ├── cloudflare-worker/      # 🆕 Cloudflare Worker边缘函数（Wrangler/TypeScript/KV/R2/D1/全球边缘节点）
 ├── taste-skill/            # 🆕 反平庸UI设计（去AI味UI/参数化设计控制/8大设计方向/anti-slop）
-└── cybersecurity-skills/   # 🆕 网络安全分析师技能库（754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应）
+├── cybersecurity-skills/   # 🆕 网络安全分析师技能库（754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应）
+└── enterprise-crm-fullstack/ # 🆕 企业级CRM全栈开发规范（Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限）
 ```
 
 ---
@@ -155,9 +156,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（104个）
+## 🚀 已安装的 Skills（105个）
 
-### 🔧 开发方法论类（55个）
+### 🔧 开发方法论类（56个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -215,6 +216,7 @@ D:\xgq\work\skills-ai\
 | **dev-toolkit-integrator** | 🆕 禅道·Jira·Wiki三工具集成：需求流转/Bug跟踪/迭代规划/发布版本/跨工具同步 | 自建 | - |
 | **cloudflare-worker** | 🆕 Cloudflare Worker边缘函数：Wrangler CLI/TypeScript/KV/R2/D1/全球300+边缘节点 | Anthropic官方+社区 | 114K |
 | **cybersecurity-skills** | 🆕 网络安全分析师技能库：754技能/26领域/MITRE ATT&CK映射/威胁狩猎/事件响应/渗透测试 | mukul975 | 14K |
+| **enterprise-crm-fullstack** | 🆕 企业级CRM全栈开发规范：Vue 2+Element UI+Java/配置式列表页/详情页/国际化/权限控制 | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -584,6 +586,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-29 | 🆕新增 | cloudflare-worker（Cloudflare Worker边缘函数·Wrangler/TypeScript/KV/R2/D1） | Cloudflare官方+社区最佳实践 |
 | 2026-06-04 | 🆕新增 | taste-skill（反平庸UI设计·去AI味UI/参数化设计控制/8大设计方向/anti-slop） | Leonxlnx ⭐32.7K（GitHub Trending 热门） |
 | 2026-06-04 | 🆕新增 | cybersecurity-skills（网络安全分析师技能库·754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应） | mukul975 ⭐14K（GitHub Trending 热门） |
+| 2026-06-04 | 🆕新增 | enterprise-crm-fullstack（企业级CRM全栈开发规范·Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限） | 自建（基于企业级CRM项目实战经验） |
 
 ---
 
