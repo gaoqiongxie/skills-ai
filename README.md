@@ -115,7 +115,8 @@ D:\xgq\work\skills-ai\
 ├── cloudflare-worker/      # 🆕 Cloudflare Worker边缘函数（Wrangler/TypeScript/KV/R2/D1/全球边缘节点）
 ├── taste-skill/            # 🆕 反平庸UI设计（去AI味UI/参数化设计控制/8大设计方向/anti-slop）
 ├── cybersecurity-skills/   # 🆕 网络安全分析师技能库（754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应）
-└── enterprise-crm-fullstack/ # 🆕 企业级CRM全栈开发规范（Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限）
+├── enterprise-crm-fullstack/ # 🆕 企业级CRM全栈开发规范（Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限）
+└── enterprise-iteration-agent/ # 🆕 企业级全栈迭代工作流Agent（7阶段闭环/状态机/路径感知/子Skill编排）
 ```
 
 ---
@@ -156,7 +157,120 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（105个）
+## 🔄 全栈开发周期环绕图
+
+105个技能围绕 **需求 → 设计 → 开发 → 测试 → Review → 部署/记忆** 形成完整的全栈开发闭环。一个迭代通常从需求理解开始，经架构设计、编码开发、测试验证、质量审查，最终部署交付并将经验沉淀为记忆，反哺下一轮迭代。
+
+```
+                              ┌──────────┐
+                         ┌────│  需求理解  │────┐
+                         │    └──────────┘    │
+                         │         │          │
+                         ▼         ▼          ▼
+                  ┌──────────┐  ┌──────────┐  ┌─────────────────┐
+                  │ screenshot │  │ dev-toolkit │  │   openspec-sdd   │
+                  │  -to-prd   │  │ -integrator │  │  + brainstorming │
+                  └──────────┘  └──────────┘  └─────────────────┘
+                         │         │          │
+                         └────┬────┴────┬─────┘
+                              ▼         ▼
+                         ┌──────────┐
+                         │  架构设计  │
+                         └──────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              ▼               ▼               ▼
+       ┌──────────┐    ┌──────────┐    ┌──────────┐
+       │ database │    │    api   │    │ frontend │
+       │ -designer│    │  -doc    │    │ -design  │
+       │+erd-doc  │    │-generator│    │+huashu   │
+       └──────────┘    └──────────┘    │+taste    │
+                                        └──────────┘
+                                              │
+                              ┌───────────────┴───────────────┐
+                              ▼                               ▼
+                         ┌──────────┐                  ┌──────────┐
+                         │  编码开发  │◀────────────────▶│  测试验证  │
+                         └──────────┘                  └──────────┘
+                              │                               ▲
+        ┌─────────────────────┼─────────────────────┐          │
+        ▼                     ▼                     ▼          │
+ ┌──────────────┐   ┌──────────────┐   ┌──────────────┐        │
+ │ enterprise   │   │   backend    │   │  frontend    │        │
+ │ -crm-        │   │  -change-    │   │ -code-review │        │
+ │ fullstack    │   │    flow      │   │+opinionated  │        │
+ │+web-artifacts│   │+karpathy     │   │ -engineer    │        │
+ │ -builder     │   │ -skills      │   │+stop-slop    │        │
+ └──────────────┘   └──────────────┘   └──────────────┘        │
+        │                     │                     │           │
+        └─────────────────────┼─────────────────────┘           │
+                              ▼                                 │
+                         ┌──────────┐                           │
+                         │  质量审查  │───────────────────────────┘
+                         └──────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              ▼               ▼               ▼
+       ┌──────────┐    ┌──────────┐    ┌──────────┐
+       │ quality  │    │  create  │    │ confidence│
+       │  -gate   │    │   -pr    │    │  -check   │
+       └──────────┘    └──────────┘    └──────────┘
+                              │
+                              ▼
+                         ┌──────────┐
+                         │  部署交付  │
+                         └──────────┘
+                              │
+              ┌───────────────┼───────────────┐
+              ▼               ▼               ▼
+       ┌──────────┐    ┌──────────┐    ┌──────────┐
+       │ git-     │    │  solo-   │    │  multi-  │
+       │ commit   │    │ parallel │    │ agent    │
+       │          │    │   -dev   │    │ -orches  │
+       └──────────┘    └──────────┘    └──────────┘
+                              │
+                              ▼
+                         ┌──────────┐
+                         │  记忆沉淀  │────┐
+                         └──────────┘    │
+                              │          │
+              ┌───────────────┼──────────┘
+              ▼               ▼
+       ┌──────────┐    ┌──────────┐
+       │ memory   │    │  beads   │
+       │  -hub    │    │ -memory  │
+       │+hermes   │    │+claude   │
+       │ -exp     │    │ -mem     │
+       └──────────┘    └──────────┘
+                              │
+                              └──────────────────────┐
+                                                     ▼
+                                              ┌──────────┐
+                                              │  反哺下一轮 │
+                                              │   迭代    │
+                                              └──────────┘
+```
+
+### 各阶段技能速查
+
+| 阶段 | 核心技能 | 作用说明 |
+|------|---------|---------|
+| **需求理解** | `screenshot-to-prd` · `prd-to-demo` · `openspec-sdd` · `brainstorming` · `dev-toolkit-integrator` | UI/PRD互转 → 原型验证 → 规范驱动 → 头脑风暴 → 需求流转（禅道/Jira/Wiki） |
+| **架构设计** | `database-designer` · `erd-document` · `api-doc-generator` · `diagram-design` · `frontend-design` · `huashu-design` · `taste-skill` | 数据库设计 → 系统文档 → API契约 → 图表表达 → UI设计 → 去AI味设计 |
+| **编码开发** | `enterprise-crm-fullstack` · `backend-change-flow` · `web-artifacts-builder` · `cloudflare-worker` · `karpathy-skills` · `opinionated-engineer` · `stop-slop` | 前后端规范编码 → 变更流程 → 复杂构件 → 边缘函数 → 编程避坑 → 工程化 → 去AI味 |
+| **测试验证** | `testing-patterns` · `webapp-testing` · `security-audit` · `test-driven-development` | 单元/集成/E2E分层测试 → Web自动化 → 安全审计 → TDD红绿重构 |
+| **质量审查** | `quality-gate` · `create-pr` · `frontend-code-review` · `confidence-check` | 提交前五维检查 → 自动PR生成 → 前端结构化Review → AI置信度自评 |
+| **部署交付** | `git-commit` · `solo-parallel-dev` · `multi-agent-orchestration` · `ai-collaboration-safety` | 规范提交 → 多分支并行 → 多Agent编排 → 安全协作防幻觉 |
+| **记忆沉淀** | `memory-hub` · `hermes-experience` · `beads-memory` · `claude-mem` · `supermemory` | 统一记忆路由 → 经验模式提取 → 代码库上下文持久化 → 跨会话记忆 |
+
+> 💡 **实战建议**：一个标准迭代的典型路径为：
+> `openspec-sdd`（规范对齐） → `database-designer` + `api-doc-generator`（设计） → `enterprise-crm-fullstack` + `backend-change-flow`（开发） → `testing-patterns` + `security-audit`（测试） → `quality-gate` + `create-pr`（Review） → `git-commit` + `solo-parallel-dev`（部署） → `memory-hub` + `hermes-experience`（沉淀）。
+>
+> 🎯 **进阶用法**：激活 `enterprise-iteration-agent`，说一句"开始开发【xxx】需求"，Agent 会自动按上述路径推进，维护迭代状态机，并在每个阶段调用对应 Skill 完成工作。
+
+---
+
+## 🚀 已安装的 Skills（106个）
 
 ### 🔧 开发方法论类（56个）
 
@@ -217,6 +331,7 @@ D:\xgq\work\skills-ai\
 | **cloudflare-worker** | 🆕 Cloudflare Worker边缘函数：Wrangler CLI/TypeScript/KV/R2/D1/全球300+边缘节点 | Anthropic官方+社区 | 114K |
 | **cybersecurity-skills** | 🆕 网络安全分析师技能库：754技能/26领域/MITRE ATT&CK映射/威胁狩猎/事件响应/渗透测试 | mukul975 | 14K |
 | **enterprise-crm-fullstack** | 🆕 企业级CRM全栈开发规范：Vue 2+Element UI+Java/配置式列表页/详情页/国际化/权限控制 | 自建 | - |
+| **enterprise-iteration-agent** | 🆕 企业级全栈迭代工作流Agent：需求→设计→开发→测试→Review→部署→记忆7阶段闭环，状态机驱动，子Skill编排 | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -587,6 +702,7 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-06-04 | 🆕新增 | taste-skill（反平庸UI设计·去AI味UI/参数化设计控制/8大设计方向/anti-slop） | Leonxlnx ⭐32.7K（GitHub Trending 热门） |
 | 2026-06-04 | 🆕新增 | cybersecurity-skills（网络安全分析师技能库·754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应） | mukul975 ⭐14K（GitHub Trending 热门） |
 | 2026-06-04 | 🆕新增 | enterprise-crm-fullstack（企业级CRM全栈开发规范·Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限） | 自建（基于企业级CRM项目实战经验） |
+| 2026-06-04 | 🆕新增 | enterprise-iteration-agent（企业级全栈迭代工作流Agent·7阶段闭环/状态机/路径感知/子Skill编排） | 自建（串联105个Skill形成开发闭环） |
 
 ---
 
