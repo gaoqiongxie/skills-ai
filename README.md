@@ -108,11 +108,13 @@ D:\xgq\work\skills-ai\
 ├── solo-parallel-dev/     # 🆕 单人多分支并行开发（worktree隔离/分支看板/冲突预防/上下文恢复）
 ├── qiaopi-style/          # 🆕 侨批体书信生成（闽南番客家书/半文半白/见字如面/侨批文化）
 ├── mental-health-check/   # 🆕 专业心理健康自评（PHQ-9/GAD-7/PSS-10/MBI职业倦怠）
-└── dev-toolkit-integrator/ # 🆕 禅道·Jira·Wiki三工具集成（需求流转/Bug跟踪/迭代规划/发布版本）
+├── dev-toolkit-integrator/ # 🆕 禅道·Jira·Wiki三工具集成（需求流转/Bug跟踪/迭代规划/发布版本）
 ├── web-artifacts-builder/  # 🆕 复杂Web构件构建器（React+Tailwind+shadcn/ui多组件/状态管理/路由）
 ├── remotion-video/         # 🆕 Remotion React视频生成器（Composition/Sequence/逐帧渲染/FFmpeg导出）
 ├── algorithmic-art/        # 🆕 算法艺术生成器（p5.js/Canvas/粒子系统/噪声纹理/种子可控复现）
-└── cloudflare-worker/      # 🆕 Cloudflare Worker边缘函数（Wrangler/TypeScript/KV/R2/D1/全球边缘节点）
+├── cloudflare-worker/      # 🆕 Cloudflare Worker边缘函数（Wrangler/TypeScript/KV/R2/D1/全球边缘节点）
+├── taste-skill/            # 🆕 反平庸UI设计（去AI味UI/参数化设计控制/8大设计方向/anti-slop）
+└── cybersecurity-skills/   # 🆕 网络安全分析师技能库（754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应）
 ```
 
 ---
@@ -153,9 +155,9 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（102个）
+## 🚀 已安装的 Skills（104个）
 
-### 🔧 开发方法论类（54个）
+### 🔧 开发方法论类（55个）
 
 | Skill名称 | 功能 | 来源 | Stars |
 |----------|------|------|-------|
@@ -212,6 +214,7 @@ D:\xgq\work\skills-ai\
 | **solo-parallel-dev** | 🆕 单人多分支并行开发：worktree物理隔离/分支状态看板/冲突预防/上下文恢复协议 | 自建 | - |
 | **dev-toolkit-integrator** | 🆕 禅道·Jira·Wiki三工具集成：需求流转/Bug跟踪/迭代规划/发布版本/跨工具同步 | 自建 | - |
 | **cloudflare-worker** | 🆕 Cloudflare Worker边缘函数：Wrangler CLI/TypeScript/KV/R2/D1/全球300+边缘节点 | Anthropic官方+社区 | 114K |
+| **cybersecurity-skills** | 🆕 网络安全分析师技能库：754技能/26领域/MITRE ATT&CK映射/威胁狩猎/事件响应/渗透测试 | mukul975 | 14K |
 
 ### 💼 工作类（7个）
 
@@ -303,7 +306,7 @@ D:\xgq\work\skills-ai\
 | **plant-care** | 绿植养护指南 | "绿植养护"、"植物怎么养" |
 | **home-storage** | 家居收纳指南 | "收纳"、"整理房间" |
 
-### 🎨 设计类（4个）🆕
+### 🎨 设计类（5个）🆕
 
 | Skill名称 | 功能 | 来源 | 触发关键词 |
 |----------|------|------|-----------|
@@ -311,6 +314,7 @@ D:\xgq\work\skills-ai\
 | **diagram-design** | 编辑级图表设计，13种图表类型，纯HTML+SVG，拒绝Mermaid | cathrynlavery/diagram-design ⭐1.3K | "画架构图"、"画流程图"、"生成图表"、"做一张图" |
 | **huashu-design** | 花叔HTML原生设计，20种设计哲学/5维评审/品牌识别 | alchaincyf/huashu-design ⭐2.8K | "做网页"、"设计界面"、"做落地页"、"做活动页" |
 | **web-artifacts-builder** | 🆕 复杂Web构件构建器：React+Tailwind+shadcn/ui多组件/状态管理/路由切换 | Anthropic官方 ⭐114K | "做个复杂网页"、"数据看板"、"交互式配置页面"、"React组件页面"、"shadcn界面" |
+| **taste-skill** | 🆕 反平庸UI设计：去AI味UI/参数化设计控制/8大设计方向/anti-slop反重复 | Leonxlnx ⭐32.7K | "反平庸设计"、"去AI味UI"、"提升界面品质"、"UI太模板化"、"让页面更有设计感" |
 
 ---
 
@@ -578,6 +582,8 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-05-29 | 🆕新增 | remotion-video（Remotion React视频生成器·组件化视频/逐帧渲染/FFmpeg导出） | Remotion官方 |
 | 2026-05-29 | 🆕新增 | algorithmic-art（算法艺术生成器·p5.js/Canvas/粒子系统/噪声纹理/种子可控） | Anthropic官方 ⭐114K |
 | 2026-05-29 | 🆕新增 | cloudflare-worker（Cloudflare Worker边缘函数·Wrangler/TypeScript/KV/R2/D1） | Cloudflare官方+社区最佳实践 |
+| 2026-06-04 | 🆕新增 | taste-skill（反平庸UI设计·去AI味UI/参数化设计控制/8大设计方向/anti-slop） | Leonxlnx ⭐32.7K（GitHub Trending 热门） |
+| 2026-06-04 | 🆕新增 | cybersecurity-skills（网络安全分析师技能库·754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应） | mukul975 ⭐14K（GitHub Trending 热门） |
 
 ---
 
