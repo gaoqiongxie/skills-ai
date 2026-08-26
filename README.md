@@ -116,7 +116,10 @@ D:\xgq\work\skills-ai\
 ├── taste-skill/            # 🆕 反平庸UI设计（去AI味UI/参数化设计控制/8大设计方向/anti-slop）
 ├── cybersecurity-skills/   # 🆕 网络安全分析师技能库（754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应）
 ├── enterprise-crm-fullstack/ # 🆕 企业级CRM全栈开发规范（Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限）
-└── enterprise-iteration-agent/ # 🆕 企业级全栈迭代工作流Agent（7阶段闭环/状态机/路径感知/子Skill编排）
+├── enterprise-iteration-agent/ # 🆕 企业级全栈迭代工作流Agent（7阶段闭环/状态机/路径感知/子Skill编排）
+├── mcp-builder/              # 🆕 MCP构建指南（Model Context Protocol / Tool / Resource / Prompt）
+├── vibe-coding/              # 🆕 Vibe Coding实战（自然语言驱动开发/护栏/重构固化）
+└── repo-intelligence/        # 🆕 仓库智能（代码库问答/变更影响分析/架构意图还原）
 ```
 
 ---
@@ -150,16 +153,16 @@ D:\xgq\work\skills-ai\
 | **OpenSpec-SDD** | 规范驱动开发，Gherkin验收场景对齐需求 | `openspec-sdd` |
 | **Agentic AI** | 从聊天助手进化为自主执行工作流的Agent | `multi-agent-orchestration` |
 | **Context Engineering** | 比Prompt Engineering更高级的信息环境优化 | `bmad-method` |
-| **Vibe Coding** | 自然语言驱动开发，45%AI生成代码有安全漏洞 | 待补充 |
-| **MCP** | Model Context Protocol，AI工具集成标准 | 待补充 |
-| **Repository Intelligence** | AI理解整个代码库、提交历史、架构意图 | 待补充 |
+| **Vibe Coding** | 自然语言驱动开发，45%AI生成代码有安全漏洞 | `vibe-coding` |
+| **MCP** | Model Context Protocol，AI工具集成标准 | `mcp-builder` |
+| **Repository Intelligence** | AI理解整个代码库、提交历史、架构意图 | `repo-intelligence` |
 | **Skill供应链安全** | Snyk发现36%的skills存在恶意提示注入 | `security-audit` |
 
 ---
 
 ## 🔄 全栈开发周期环绕图
 
-105个技能围绕 **需求 → 设计 → 开发 → 测试 → Review → 部署/记忆** 形成完整的全栈开发闭环。一个迭代通常从需求理解开始，经架构设计、编码开发、测试验证、质量审查，最终部署交付并将经验沉淀为记忆，反哺下一轮迭代。
+109个技能围绕 **需求 → 设计 → 开发 → 测试 → Review → 部署/记忆** 形成完整的全栈开发闭环。一个迭代通常从需求理解开始，经架构设计、编码开发、测试验证、质量审查，最终部署交付并将经验沉淀为记忆，反哺下一轮迭代。
 
 ```
                               ┌──────────┐
@@ -270,7 +273,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（106个）
+## 🚀 已安装的 Skills（109个）
 
 ### 🔧 开发方法论类（56个）
 
@@ -332,6 +335,9 @@ D:\xgq\work\skills-ai\
 | **cybersecurity-skills** | 🆕 网络安全分析师技能库：754技能/26领域/MITRE ATT&CK映射/威胁狩猎/事件响应/渗透测试 | mukul975 | 14K |
 | **enterprise-crm-fullstack** | 🆕 企业级CRM全栈开发规范：Vue 2+Element UI+Java/配置式列表页/详情页/国际化/权限控制 | 自建 | - |
 | **enterprise-iteration-agent** | 🆕 企业级全栈迭代工作流Agent：需求→设计→开发→测试→Review→部署→记忆7阶段闭环，状态机驱动，子Skill编排 | 自建 | - |
+| **mcp-builder** | 🆕 MCP构建指南：Model Context Protocol / Tool / Resource / Prompt 封装，stdio/SSE/HTTP 传输 | Anthropic官方+社区 | 114K |
+| **vibe-coding** | 🆕 Vibe Coding实战：自然语言驱动开发/护栏/重构固化，与 quality-gate / stop-slop 联动 | 社区热门 | - |
+| **repo-intelligence** | 🆕 仓库智能：代码库问答/变更影响分析/架构意图还原/RAG over Codebase | 自建 | - |
 
 ### 💼 工作类（7个）
 
@@ -703,6 +709,9 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-06-04 | 🆕新增 | cybersecurity-skills（网络安全分析师技能库·754技能/26领域/MITRE ATT&CK/威胁狩猎/事件响应） | mukul975 ⭐14K（GitHub Trending 热门） |
 | 2026-06-04 | 🆕新增 | enterprise-crm-fullstack（企业级CRM全栈开发规范·Vue 2+Element UI+Java/配置式列表/详情页/国际化/权限） | 自建（基于企业级CRM项目实战经验） |
 | 2026-06-04 | 🆕新增 | enterprise-iteration-agent（企业级全栈迭代工作流Agent·7阶段闭环/状态机/路径感知/子Skill编排） | 自建（串联105个Skill形成开发闭环） |
+| 2026-08-26 | 🆕新增 | mcp-builder（MCP构建指南·Model Context Protocol / Tool / Resource / Prompt） | Anthropic官方+社区最佳实践（2026热门趋势） |
+| 2026-08-26 | 🆕新增 | vibe-coding（Vibe Coding实战·自然语言驱动开发/护栏/重构固化） | 社区热门（2026 AI编程热词） |
+| 2026-08-26 | 🆕新增 | repo-intelligence（仓库智能·代码库问答/变更影响分析/架构意图还原） | 自建（Repository Intelligence/RAG over Codebase） |
 
 ---
 
