@@ -1,102 +1,196 @@
 ---
 name: "skill-lookup"
-description: "元技能：搜索和发现WorkBuddy可用的Skills，支持一键安装。本技能可帮助用户找到满足特定需求的Skill，当用户询问'有什么skill'、'有没有xxx的skill'、'推荐一个skill'时触发。"
+description: "Skills发现与搜索助手：在111个本地Skills中按关键词、场景、分类快速找到需要的Skill；本地没有时推荐GitHub/MCP热门来源。当用户说'有什么skill'、'有没有xxx的skill'、'推荐一个skill'、'搜索skill'、'skill目录'、'skill列表'、'找skill'时触发。"
 ---
 
-# Skill Lookup - Skills发现与安装助手
+> **来源**: skills.sh (418K+ 安装量) + 自建索引
+>
+> **发布时间**: 2026-08
+>
+> **理念**: "找 Skill 不该靠翻目录，应该靠一句话搜索。"
 
-> **来源**: skills.sh (418K+ 安装量) - AI Skills生态系统核心元技能
-> 
-> **参考**: github.com/anthropics/skills, github.com/JackyST0/awesome-agent-skills
+# 🔍 Skill Lookup — Skills 发现与搜索助手
 
-## 核心定位
+当你不确定有没有某个 Skill，或者想找某个场景下的 Skill 时，用我。
 
-Skill Lookup是一个"元技能"(Meta-Skill)，它的唯一职责是帮助用户发现和安装其他Skills。当你不确定某个功能是否有现成的Skill时，先用这个技能来搜索。
+---
 
-## 工作流程
+## 使用方法
 
-### 1. 理解用户需求
+### 方式一：按需求搜索
 
-当用户提出类似问题时触发：
-- "有没有做xxx的skill"
-- "帮我找个xxx助手"
-- "有什么好用的skill推荐"
-- "我想做xxx，有什么工具吗"
-
-**分析步骤**：
-1. 提取用户需求的核心关键词
-2. 判断需求类别（工作/生活/学习/创意/开发）
-3. 搜索现有Skills库
-
-### 2. 搜索Skills库
-
-检查本地Skills库 `~/.workbuddy/skills/` 和项目Skills `.workbuddy/skills/`
-
-**常见需求匹配**：
-
-| 需求类型 | 可能匹配的Skills |
-|---------|-----------------|
-| 写作/文案 | moments-copywriter, letter-future, poetry-scenery |
-| 生活决策 | food-picker, gift-advisor, outfit-weather, recipe-random |
-| 学习辅导 | study-buddy, wrong-answer, knowledge-card |
-| 职场工作 | meeting-notes, weekly-report, leave-request, argue-winner |
-| 创意娱乐 | epitaph-generator, horoscope, emoji-translator, sleep-story |
-| 开发技术 | docx, pdf, pptx, xlsx (Anthropic官方) |
-| 家居生活 | declutter-judge, home-design, plant-care, home-storage |
-| 情感倾诉 | venting-hole, choice-helper |
-
-### 3. 推荐与安装
-
-**推荐格式**：
 ```
-📦 发现匹配Skill: [skill-name]
-
-功能描述：一句话说明功能
-来源：标明是本地已有还是需要安装
-安装方式：如果是新Skill，告知安装路径
-使用示例：给出1-2个使用示例
+"有没有做 PPT 的 skill？"
+"推荐一个写代码的 skill"
+"我想做数据库设计，有什么 skill？"
+"搜索 Docker 相关的 skill"
 ```
 
-**安装新Skill**：
-- 用户级安装：`cp -r <skill-path> ~/.workbuddy/skills/`
-- 项目级安装：`cp -r <skill-path> .workbuddy/skills/`
+### 方式二：按分类浏览
 
-## Skills市场资源
+```
+"列出所有前端相关的 skill"
+"给我看看生活类的 skill"
+"DevOps 相关的 skill 有哪些？"
+```
 
-当本地没有匹配时，可参考以下热门市场：
+### 方式三：模糊匹配
+
+```
+"我想让 AI 帮我写周报"
+"有没有能分析 SQL 慢查询的？"
+"帮我找一个做旅行攻略的"
+```
+
+---
+
+## 本地 Skills 分类索引（111个）
+
+### 🎛️ 元技能（4个）
+- **skill-orchestrator** — 统一入口，自动匹配 Skill 和工作流
+- **skill-lookup** — 本 Skill，搜索发现
+- **skill-creator** — 创建新 Skill
+- **skill-quality-analyzer** — 评估 Skill 质量
+
+### 🤖 AI 基础设施与 Agent（8个）
+- **mcp-builder** — MCP Server / Tool 封装
+- **multi-agent-orchestration** — 多 Agent 编排
+- **agent-governance** — Agent 治理框架
+- **ai-collaboration-safety** — AI 协作安全
+- **vibe-coding** — 自然语言驱动开发
+- **repo-intelligence** — 仓库智能 / RAG
+- **codebase-inventory-audit** — 代码库清单审计
+- **dictionary-of-ai-coding** — AI 编码术语词典
+
+### 🧠 开发方法论与工作流（13个）
+- **bmad-method** — AI 驱动敏捷开发
+- **ai-dlc** — AI 驱动开发生命周期
+- **prompt-driven-dev** — 提示驱动开发
+- **openspec-sdd** — 规范驱动开发
+- **dev-flow** — 智能开发工作流
+- **enterprise-iteration-agent** — 企业级迭代 Agent
+- **writing-plans** — 详细实施计划
+- **brainstorming** — 结构化头脑风暴
+- **systematic-debugging** — 系统化调试
+- **karpathy-skills** — LLM 编程避坑
+- **opinionated-engineer** — 工程化脚手架
+- **caveman-skill** — Token 优化
+- **confidence-check** — AI 置信度评估
+
+### 🎨 前端工程（5个）
+- **frontend-design** — 前端设计规范
+- **frontend-code-review** — 前端代码审查
+- **web-artifacts-builder** — 复杂 Web 构件
+- **browser-use** — 浏览器自动化
+- **stop-slop** — 去除 AI 味
+
+### 🗄️ 后端与数据库（6个）
+- **api-doc-generator** — API 文档生成
+- **database-designer** — 数据库设计
+- **erd-document** — 系统设计文档
+- **postgres-pro** — PostgreSQL 进阶诊断
+- **backend-change-flow** — 后端需求驱动变更
+- **enterprise-crm-fullstack** — 企业级 CRM 全栈规范
+
+### 🐳 DevOps 与云（2个）
+- **devops-toolchain** — Docker/K8s/Terraform/GitHub Actions
+- **cloudflare-worker** — Cloudflare Worker 边缘函数
+
+### 🧪 测试与质量（6个）
+- **test-driven-development** — TDD
+- **testing-patterns** — 全栈测试模式
+- **webapp-testing** — Web 自动化测试
+- **quality-gate** — 代码质量门控
+- **create-pr** — 自动生成 PR
+- **document-typography** — 文档排版
+
+### 🔒 安全（2个）
+- **security-audit** — 代码安全审计
+- **cybersecurity-skills** — 网络安全分析师技能库
+
+### 🧠 记忆与经验（7个）
+- **memory-hub** — 统一记忆中枢
+- **beads-memory**、**claude-mem**、**supermemory**、**memory-bank**、**memory-system** — 各类记忆方案
+- **hermes-experience** — 经验沉淀
+
+### 🛠️ 开发工具与效率（7个）
+- **git-commit**、**solo-parallel-dev**、**cron-expression**、**skill-accelerator**、**dev-toolkit-integrator**、**claude-obsidian-reporter**、**hads**
+
+### 💼 职场工作（7个）
+- **anti-pua**、**meeting-notes**、**weekly-report**、**leave-request**、**elevator-pitch**、**argue-winner**、**bs-translator**
+
+### 🎨 生活娱乐（8个）
+- **food-picker**、**gift-advisor**、**outfit-weather**、**recipe-random**、**travel-planner**、**weather-pro**、**music-recommender**、**personality-test**
+
+### 📚 学习成长（5个）
+- **wrong-answer**、**knowledge-card**、**study-buddy**、**jargon-translator**、**ai-trend-radar**
+
+### 🏥 健康科普（2个）
+- **cardiac-arrest-guide**、**mental-health-check**
+
+### 🎮 传统文化游戏（2个）
+- **idiom-chain**、**feihua-ling**
+
+### 🎨 视觉内容设计（6个）
+- **html-ppt-skill**、**diagram-design**、**huashu-design**、**taste-skill**、**remotion-video**、**algorithmic-art**
+
+### 💡 创意写作（10个）
+- **poetry-scenery**、**moments-copywriter**、**letter-future**、**epitaph-generator**、**horoscope**、**emoji-translator**、**qiaopi-style**、**rural-story-writer**、**sleep-story**、**year-summary**
+
+### 🧠 思考决策（3个）
+- **relationship-patterns**、**choice-helper**、**venting-hole**
+
+### 🏠 居家生活（5个）
+- **photo-organizer**、**declutter-judge**、**home-design**、**plant-care**、**home-storage**
+
+---
+
+## 搜索示例
+
+| 你说 | 搜索结果 |
+|------|---------|
+| "数据库" | `database-designer`、`postgres-pro`、`erd-document` |
+| "前端" | `frontend-design`、`frontend-code-review`、`web-artifacts-builder`、`huashu-design`、`taste-skill` |
+| "测试" | `testing-patterns`、`webapp-testing`、`test-driven-development`、`quality-gate` |
+| "部署" | `devops-toolchain`、`cloudflare-worker`、`solo-parallel-dev` |
+| "安全" | `security-audit`、`cybersecurity-skills`、`ai-collaboration-safety` |
+| "记忆" | `memory-hub`、`beads-memory`、`claude-mem`、`supermemory` |
+| "周报" | `weekly-report` |
+| "旅行" | `travel-planner`、`weather-pro`、`outfit-weather` |
+| "AI 趋势" | `ai-trend-radar` |
+| "MCP" | `mcp-builder` |
+
+---
+
+## 本地没有？看这些热门来源
 
 ### 官方市场
-- **Anthropic官方Skills**: github.com/anthropics/skills (114K⭐)
-  - docx, pdf, pptx, xlsx, 创意类技能
-  
+- **Anthropic 官方 Skills**: github.com/anthropics/skills
+- **Microsoft Playwright MCP**: github.com/microsoft/playwright-mcp
+- **Upstash Context7**: github.com/upstash/context7
+
 ### 社区精选
-- **awesome-agent-skills**: github.com/JackyST0/awesome-agent-skills (441⭐)
-  - 精选列表，支持一键安装脚本
-  
-### 热门开发Skills (Top 20)
-| Skill | Stars | 用途 |
-|-------|-------|------|
-| create-pr | 169.7K | 自动创建GitHub PR |
-| frontend-code-review | 126.3K | 前端代码审查 |
-| component-refactoring | 126.3K | React组件重构 |
-| cache-components-expert | 137.2K | LLM缓存优化 |
+- **alirezarezvani/claude-skills**: 380+ Claude Code skills
+- **punkpeye/awesome-mcp-servers**: MCP 服务器大全
+- **mattpocock/skills**: Skills for Real Engineers
 
-### 热门平台
-- **skills.sh**: skills.sh - 一键安装
-- **awesomeskills.dev**: awesomeskills.dev - 最大精选目录
-- **MCP Market**: agentskill.sh - 36万+ Skills
+### 发现平台
+- **skills.sh**: 一键安装
+- **awesomeskills.dev**: 精选目录
+- **MCP Market**: agentskill.sh
 
-## 需求扩展
+---
 
-如果现有Skills都不能满足需求，可以：
+## 与 skill-orchestrator 的关系
 
-1. **组合现有Skills**：多个简单Skills组合使用
-2. **创建新Skill**：参考 skill-creator 指引创建
-3. **推荐外部工具**：非Skills类的优秀工具
+| 场景 | 用哪个 |
+|------|--------|
+| 不知道用哪个 Skill | `skill-orchestrator` |
+| 想找某个 Skill 是否存在 | `skill-lookup`（本 Skill） |
+| 想浏览某类 Skill | `skill-lookup` |
+| 想组合多个 Skill 完成工作流 | `skill-orchestrator` |
+| 想优化 Skill 质量 | `skill-quality-analyzer` |
 
-## 注意事项
+---
 
-- 优先推荐本地已安装的Skills
-- 标注每个Skill的来源和人气
-- 安装前确认安装路径
-- 提供使用示例帮助用户上手
+> "Skill 越多，越需要好的发现工具。_lookup_ 不是翻目录，而是让需求自己找到工具。"

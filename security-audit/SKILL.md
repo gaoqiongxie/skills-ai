@@ -1,6 +1,6 @@
 ---
 name: "security-audit"
-description: "安全审计工作流：AI驱动的代码安全审查，集成CodeQL/Semgrep静态分析，识别OWASP Top 10漏洞。当用户说'安全审计'、'代码安全检查'、'漏洞扫描'、'security review'、'代码安全'、'渗透测试'、'安全漏洞'、'OWASP'时触发。核心特点：静态分析集成、漏洞模式识别、修复建议自动生成、合规性检查。"
+description: "代码层安全审计：AI驱动的静态安全审查，集成CodeQL/Semgrep识别OWASP Top 10、依赖CVE、硬编码密钥。当用户说'安全审计'、'代码安全检查'、'漏洞扫描'、'security review'、'代码安全'、'OWASP'、'Semgrep'、'CodeQL'时触发。核心特点：聚焦代码层静态分析、开发阶段漏洞拦截、与cybersecurity-skills互补（后者覆盖威胁狩猎/事件响应/渗透测试）。"
 ---
 
 > **来源**: trailofbits/skills + OWASP + 安全社区实践

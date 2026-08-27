@@ -1,6 +1,6 @@
 ---
 name: "screenshot-to-prototype"
-description: "截图转可交互原型：根据UI设计稿、手绘草图或竞品截图自动生成HTML高保真原型。当用户说'根据截图生成原型'、'设计稿转Demo'、'草图转HTML'、'图片转可交互页面'、'复刻这个界面'、'仿照这个APP做原型'、'截图生成网页'时触发。核心特点：视觉分析自动还原布局、组件识别与映射、交互行为推断、多截图串联页面流、响应式适配。"
+description: "截图转可交互原型统一入口：根据UI设计稿、手绘草图或竞品截图自动生成HTML高保真原型，并自动联动screenshot-to-prd输出PRD、prd-to-demo完善交互。当用户说'根据截图生成原型'、'设计稿转Demo'、'草图转HTML'、'图片转可交互页面'、'复刻这个界面'、'仿照这个APP做原型'、'截图生成网页'时触发。核心特点：视觉分析自动还原布局、组件识别与映射、多截图串联页面流、与screenshot-to-prd/prd-to-demo形成设计驱动闭环。"
 ---
 
 > **来源**: 自建（融合 screenshot-to-prd + prd-to-demo + frontend-design 能力）
