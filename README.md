@@ -119,7 +119,9 @@ D:\xgq\work\skills-ai\
 ├── enterprise-iteration-agent/ # 🆕 企业级全栈迭代工作流Agent（7阶段闭环/状态机/路径感知/子Skill编排）
 ├── mcp-builder/              # 🆕 MCP构建指南（Model Context Protocol / Tool / Resource / Prompt）
 ├── vibe-coding/              # 🆕 Vibe Coding实战（自然语言驱动开发/护栏/重构固化）
-└── repo-intelligence/        # 🆕 仓库智能（代码库问答/变更影响分析/架构意图还原）
+├── repo-intelligence/        # 🆕 仓库智能（代码库问答/变更影响分析/架构意图还原）
+├── devops-toolchain/         # 🆕 DevOps工具链（Docker/Kubernetes/Terraform/GitHub Actions/CI/CD）
+└── postgres-pro/             # 🆕 PostgreSQL进阶诊断（慢查询/EXPLAIN/索引/连接池/VACUUM/锁分析）
 ```
 
 ---
@@ -162,7 +164,7 @@ D:\xgq\work\skills-ai\
 
 ## 🔄 全栈开发周期环绕图
 
-109个技能围绕 **需求 → 设计 → 开发 → 测试 → Review → 部署/记忆** 形成完整的全栈开发闭环。一个迭代通常从需求理解开始，经架构设计、编码开发、测试验证、质量审查，最终部署交付并将经验沉淀为记忆，反哺下一轮迭代。
+111个技能围绕 **需求 → 设计 → 开发 → 测试 → Review → 部署/记忆** 形成完整的全栈开发闭环。一个迭代通常从需求理解开始，经架构设计、编码开发、测试验证、质量审查，最终部署交付并将经验沉淀为记忆，反哺下一轮迭代。
 
 ```
                               ┌──────────┐
@@ -273,7 +275,7 @@ D:\xgq\work\skills-ai\
 
 ---
 
-## 🚀 已安装的 Skills（109个）
+## 🚀 已安装的 Skills（111个）
 
 ### 🔧 开发方法论类（56个）
 
@@ -338,6 +340,8 @@ D:\xgq\work\skills-ai\
 | **mcp-builder** | 🆕 MCP构建指南：Model Context Protocol / Tool / Resource / Prompt 封装，stdio/SSE/HTTP 传输 | Anthropic官方+社区 | 114K |
 | **vibe-coding** | 🆕 Vibe Coding实战：自然语言驱动开发/护栏/重构固化，与 quality-gate / stop-slop 联动 | 社区热门 | - |
 | **repo-intelligence** | 🆕 仓库智能：代码库问答/变更影响分析/架构意图还原/RAG over Codebase | 自建 | - |
+| **devops-toolchain** | 🆕 DevOps工具链：Docker/Kubernetes/Terraform/GitHub Actions/CI/CD/Helm/IaC 实战 | GitHub热门 | - |
+| **postgres-pro** | 🆕 PostgreSQL进阶诊断：慢查询/EXPLAIN/索引调优/连接池/VACUUM/锁分析/分区表 | GitHub热门 | - |
 
 ### 💼 工作类（7个）
 
@@ -712,6 +716,8 @@ description 决定WorkBuddy何时触发你的Skill，要包含：
 | 2026-08-26 | 🆕新增 | mcp-builder（MCP构建指南·Model Context Protocol / Tool / Resource / Prompt） | Anthropic官方+社区最佳实践（2026热门趋势） |
 | 2026-08-26 | 🆕新增 | vibe-coding（Vibe Coding实战·自然语言驱动开发/护栏/重构固化） | 社区热门（2026 AI编程热词） |
 | 2026-08-26 | 🆕新增 | repo-intelligence（仓库智能·代码库问答/变更影响分析/架构意图还原） | 自建（Repository Intelligence/RAG over Codebase） |
+| 2026-08-27 | 🆕新增 | devops-toolchain（DevOps工具链·Docker/Kubernetes/Terraform/GitHub Actions/CI/CD/Helm/IaC） | GitHub热门（kubernetes-mcp-server / terraform-mcp-server / alirezarezvani/claude-skills） |
+| 2026-08-27 | 🆕新增 | postgres-pro（PostgreSQL进阶诊断·慢查询/EXPLAIN/索引调优/连接池/VACUUM/锁分析/分区表） | GitHub热门（crystaldba/postgres-mcp） |
 
 ---
 
